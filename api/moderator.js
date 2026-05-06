@@ -23,7 +23,7 @@ export default async function handler(req, res) {
   }
 
   const message = {
-    content: `# **A MODERATOR WAS CALLED!**\n- *Room Name: ${roomName}*\n- *Caller Name: ${callerName}*\n- *Player ID: ${playerId}*\n\n@here`,
+    content: `# **A MODERATOR WAS CALLED!**\n- *Room Name: ${roomName}*\n- *Caller Name: ${callerName}*\n- *Player ID: ${playerId}*\n\n-# made by unity.lolz`,
   };
 
   const discordRes = await fetch(webhookUrl, {
