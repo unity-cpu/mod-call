@@ -1,6 +1,6 @@
-const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
+const WEBHOOK = process.env.DISCORD_WEBHOOK_URL;
 
-const FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "FORESTGUIDE."];
+const FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER."];
 
 const WHITELIST = [
   "6F4FBE2BCA16068A", // unity
@@ -8,11 +8,9 @@ const WHITELIST = [
   "BF29B79A2B400090", // milk
   "DB8E46A11F243DD3", // purplegirl
   "DD84C718E8AFD777", // sot
-  "35764A5E18580CF",  // cat
   "59FE193D73752516", // hasser
   "56BAE470B62F4CDD", // notagirl
   "71469BA4796CD3E4", // bunny
-  "CDAD910551C5B3C5", // cloudz
   "6BA57D0913FA0FD7", // ᴿᵉˢᵖᵉᶜᵗsandman
   "B5346D0CA3982424", // guinea
   "5ADD21B0BF6FB425", // sandman
@@ -53,20 +51,19 @@ export default async function handler(req, res) {
   const { playerId } = req.body;
   if (!playerId) return res.status(400).json({ error: "missing playerId" });
 
-  // whitelist check
   if (WHITELIST.indexOf(playerId) !== -1) {
     await sendWebhook({
       embeds: [{
         title: "cosmetics allowed",
         description: `A staff \`${playerId}\` has joined the game.`,
-        color: 65280,
+        color: 5814783,
+        footer: { text: "made by unity" },
         timestamp: new Date().toISOString(),
       }],
     });
     return res.status(200).json({ status: "authorized" });
   }
 
-  // get inventory
   let inv;
   try {
     const data = await playfabRequest("GetUserInventory", { PlayFabId: playerId });
@@ -76,7 +73,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "failed to get inventory" });
   }
 
-  // check for flagged items
   const bad = [];
   for (const item of inv) {
     for (const flag of FLAGS) {
@@ -88,7 +84,6 @@ export default async function handler(req, res) {
 
   if (bad.length === 0) return res.status(200).json({ status: "clean" });
 
-  // get ip from profile
   let ip = null;
   try {
     const data = await playfabRequest("GetPlayerProfile", {
@@ -100,7 +95,6 @@ export default async function handler(req, res) {
     console.error("failed to get player profile:", e);
   }
 
-  // revoke items
   for (const item of bad) {
     try {
       await playfabRequest("RevokeInventoryItem", {
@@ -112,7 +106,6 @@ export default async function handler(req, res) {
     }
   }
 
-  // ban
   try {
     await playfabRequest("BanUsers", {
       Bans: [{
@@ -126,17 +119,15 @@ export default async function handler(req, res) {
     console.error("failed to ban player:", e);
   }
 
-  // notify discord
   await sendWebhook({
     embeds: [{
       title: "why do you have cosmetics",
-      color: 16711680,
+      color: 5814783,
       fields: [
         { name: "Player ID", value: `\`${playerId}\``, inline: true },
         { name: "Items Revoked", value: bad.map(b => `\`${b.name}\``).join("\n"), inline: false },
-        ...(ip ? [{ name: "IP", value: `\`${ip}\``, inline: true }] : []),
       ],
-      footer: { text: "Made by unity.lolz" },
+      footer: { text: "made by unity" },
       timestamp: new Date().toISOString(),
     }],
   });
