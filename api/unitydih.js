@@ -1,4 +1,4 @@
-const WEBHOOK = process.env.DISCORD_WEBHOOK_URL;
+const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 
 const FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER."];
 
