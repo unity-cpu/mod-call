@@ -68,7 +68,7 @@ export default async function handler(req, res) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      content: `# **MOD CALLED**\n- *Room: ${roomName}*\n- *Caller: ${callerName}*\n- *ID: \`${playerId}\`*\n- *Call ${entry.count}/${LIMIT}*\n\n-# made by unity.lolz`,
+      content: `# **MOD CALLED**\n- *Room: ${roomName}*\n- *Caller: ${callerName}*\n- *ID: \`${playerId}\`**\n\n-# made by unity.lolz`,
     }),
   });
 
