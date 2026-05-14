@@ -1,6 +1,6 @@
 const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 
-const FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER."];
+const FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "FORESTGUIDE."];
 
 const WHITELIST = [
   "6F4FBE2BCA16068A", // unity
