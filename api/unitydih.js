@@ -6,14 +6,6 @@ const WHITELIST = [
   "6F4FBE2BCA16068A", // unity
   "B80667DDCD44DC17", // unity
   "BF29B79A2B400090", // milk
-  "DB8E46A11F243DD3", // purplegirl
-  "DD84C718E8AFD777", // sot
-  "59FE193D73752516", // hasser
-  "56BAE470B62F4CDD", // notagirl
-  "71469BA4796CD3E4", // bunny
-  "6BA57D0913FA0FD7", // ᴿᵉˢᵖᵉᶜᵗsandman
-  "B5346D0CA3982424", // guinea
-  "5ADD21B0BF6FB425", // sandman
 ];
 
 async function playfabRequest(endpoint, body) {
