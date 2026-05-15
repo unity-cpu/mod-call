@@ -114,7 +114,7 @@ export default async function handler(req, res) {
   await sendWebhook({
     embeds: [{
       title: "why do you have cosmetics",
-      color: 5814783,
+      color: 16711680,
       fields: [
         { name: "Player ID", value: `\`${playerId}\``, inline: true },
         { name: "Items Revoked", value: bad.map(b => `\`${b.name}\``).join("\n"), inline: false },
