@@ -65,11 +65,10 @@ export default async function handler(req, res) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         content: [
-          `# 🔨 **PLAYER BANNED**`,
+          `# **PLAYER BANNED**`,
           `- *Player: ${callerName}*`,
           `- *ID: \`${playerId}\`*`,
           `- *Room: ${roomName}*`,
-          `- *PlayFab: ${ok ? "✅ banned" : "❌ failed"}*`,
           ``,
           `-# made by unity.lolz`,
         ].join("\n"),
