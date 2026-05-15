@@ -22,7 +22,7 @@ async function playfabBan(playerId) {
     method: "POST",
     headers: { "Content-Type": "application/json", "X-SecretKey": secret },
     body: JSON.stringify({
-      Bans: [{ PlayFabId: playerId, Reason: "spamming mod calls" }],
+      Bans: [{ PlayFabId: playerId, Reason: "spamming mod calls", DurationInHours: 24 }],
     }),
   });
 
@@ -55,7 +55,7 @@ export default async function handler(req, res) {
   if (count === 1) await redis("expire", [`calls:${playerId}`, WINDOW]);
 
   if (count > LIMIT) {
-    await redis("set", [`banned:${playerId}`, 1, "ex", 86400]);
+    await redis("set", [`banned:${playerId}`, 1,]);
     await redis("del", [`calls:${playerId}`]);
 
     const ok = await playfabBan(playerId);
