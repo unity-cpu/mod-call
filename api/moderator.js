@@ -1,8 +1,17 @@
-const callLog = new Map();
-const banned = new Set();
-
 const LIMIT = 3;
-const WINDOW = 60_000;
+const WINDOW = 60;
+
+async function redis(command, args) {
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+
+  const r = await fetch(`${url}/${[command, ...args].join("/")}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+  const json = await r.json();
+  return json.result;
+}
 
 async function playfabBan(playerId) {
   const titleId = process.env.PLAYFAB_TITLE_ID;
@@ -14,7 +23,6 @@ async function playfabBan(playerId) {
     headers: { "Content-Type": "application/json", "X-SecretKey": secret },
     body: JSON.stringify({
       Bans: [{ PlayFabId: playerId, Reason: "spamming mod calls" }],
-      // DurationInHours: 24
     }),
   });
 
@@ -38,18 +46,17 @@ export default async function handler(req, res) {
   if (!roomName || !callerName || !playerId)
     return res.status(400).json({ error: "missing fields" });
 
-  if (banned.has(playerId))
-    return res.status(403).json({ error: "you are banned" });
+  // check if banned
+  const isBanned = await redis("get", [`banned:${playerId}`]);
+  if (isBanned) return res.status(403).json({ error: "you are banned" });
 
-  const now = Date.now();
-  const entry = callLog.get(playerId) ?? { count: 0, since: now };
-  if (now - entry.since > WINDOW) { entry.count = 0; entry.since = now; }
-  entry.count++;
-  callLog.set(playerId, entry);
+  // increment call count
+  const count = await redis("incr", [`calls:${playerId}`]);
+  if (count === 1) await redis("expire", [`calls:${playerId}`, WINDOW]);
 
-  if (entry.count > LIMIT) {
-    banned.add(playerId);
-    callLog.delete(playerId);
+  if (count > LIMIT) {
+    await redis("set", [`banned:${playerId}`, 1]);
+    await redis("del", [`calls:${playerId}`]);
 
     const ok = await playfabBan(playerId);
 
@@ -57,7 +64,15 @@ export default async function handler(req, res) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        content: `# **PLAYER BANNED**\n- *Player: ${callerName}*\n- *ID: \`${playerId}\`*\n- *Room: ${roomName}*\n- *PlayFab: ${ok ? "✅ banned" : "❌ failed to ban :("}*\n\n-# made by unity.lolz`,
+        content: [
+          `# 🔨 **PLAYER BANNED**`,
+          `- *Player: ${callerName}*`,
+          `- *ID: \`${playerId}\`*`,
+          `- *Room: ${roomName}*`,
+          `- *PlayFab: ${ok ? "✅ banned" : "❌ failed"}*`,
+          ``,
+          `-# made by unity.lolz`,
+        ].join("\n"),
       }),
     });
 
@@ -68,7 +83,15 @@ export default async function handler(req, res) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      content: `# **MOD CALLED**\n- *Room: ${roomName}*\n- *Caller: ${callerName}*\n- *ID: \`${playerId}\`*\n- *Call ${entry.count}/${LIMIT}*\n\n-# made by unity.lolz`,
+      content: [
+        `# **MOD CALLED**`,
+        `- *Room: ${roomName}*`,
+        `- *Caller: ${callerName}*`,
+        `- *ID: \`${playerId}\`*`,
+        `- *Call ${count}/${LIMIT}*`,
+        ``,
+        `-# made by unity.lolz`,
+      ].join("\n"),
     }),
   });
 
