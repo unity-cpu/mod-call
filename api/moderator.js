@@ -2,8 +2,8 @@ const LIMIT = 3;
 const WINDOW = 60;
 
 async function redis(command, args) {
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  const url = process.env.KV_REST_API_URL;
+  const token = process.env.KV_REST_API_TOKEN;
 
   const r = await fetch(`${url}/${[command, ...args].join("/")}`, {
     headers: { Authorization: `Bearer ${token}` },
