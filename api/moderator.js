@@ -55,7 +55,7 @@ export default async function handler(req, res) {
   if (count === 1) await redis("expire", [`calls:${playerId}`, WINDOW]);
 
   if (count > LIMIT) {
-    await redis("set", [`banned:${playerId}`, 1,]);
+    await redis("set", [`banned:${playerId}`, 1, "ex", 86400]);
     await redis("del", [`calls:${playerId}`]);
 
     const ok = await playfabBan(playerId);
