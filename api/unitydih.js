@@ -6,6 +6,7 @@ const WHITELIST = [
   "6F4FBE2BCA16068A", // unity
   "B80667DDCD44DC17", // unity
   "BF29B79A2B400090", // milk
+  "AD6D4E9FB44E6C0C", // crazythenigger
 ];
 
 async function playfabRequest(endpoint, body) {
