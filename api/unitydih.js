@@ -16,6 +16,10 @@ const WHITELIST = [
   "B5346D0CA3982424", // guinea
   "5ADD21B0BF6FB425", // sandman
   "4F5C99FA420D8B74", // table
+  "9F3619E3FB5953E0", //zenngt
+  "CF17CC675112085A", //lazybeans
+  "DC493DEB24FDD9B7", //AydenVR
+  "8804634281761F0", //cazz
 ];
 
 async function playfabRequest(endpoint, body) {
