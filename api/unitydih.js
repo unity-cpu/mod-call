@@ -24,6 +24,7 @@ const WHITELIST = [
   "BB75C720D543C50C", // jaxjr
   "EA12FC6A4F8AF723", // princess
   "2A4D748DEE715B68", // flowery boi
+  "4AB371870F86220B", // nasty plemba
 ];
 
 async function playfabRequest(endpoint, body) {
