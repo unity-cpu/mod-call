@@ -20,6 +20,7 @@ const WHITELIST = [
   "CF17CC675112085A", // lazybeans
   "DC493DEB24FDD9B7", // AydenVR
   "8804634281761F0", // cazz
+  "677777777", // 67
 ];
 
 async function playfabRequest(endpoint, body) {
