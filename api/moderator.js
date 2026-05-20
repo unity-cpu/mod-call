@@ -1,4 +1,4 @@
-const LIMIT = 3;
+const LIMIT = 2;
 const WINDOW = 60;
 
 async function redis(command, args) {
