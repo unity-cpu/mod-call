@@ -20,7 +20,8 @@ const WHITELIST = [
   "CF17CC675112085A",
   "DC493DEB24FDD9B7",
   "8804634281761F0",
-  "6F4FBE2BCA160687", //pp
+  "6F4FBE2BCA160687",
+  "6F4FBE2BCA160689", //ppp
 ];
 
 async function playfabRequest(endpoint, body) {
