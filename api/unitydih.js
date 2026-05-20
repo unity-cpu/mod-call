@@ -22,6 +22,7 @@ const WHITELIST = [
   "8804634281761F0", // cazz
   "CDAD910551C5B3C5", // cl0udz
   "BB75C720D543C50C", // jaxjr
+  "EA12FC6A4F8AF723", // princess
 ];
 
 async function playfabRequest(endpoint, body) {
