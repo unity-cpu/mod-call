@@ -21,6 +21,7 @@ const WHITELIST = [
   "DC493DEB24FDD9B7", // AydenVR
   "8804634281761F0", // cazz
   "CDAD910551C5B3C5", // cl0udz
+  "BB75C720D543C50C", // jaxjr
 ];
 
 async function playfabRequest(endpoint, body) {
