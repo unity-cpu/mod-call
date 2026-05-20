@@ -17,7 +17,6 @@ const WHITELIST = [
   "5ADD21B0BF6FB425", // sandman
   "4F5C99FA420D8B74", // table
   "9F3619E3FB5953E0", // zenngt
-  "CF17CC675112085A", // lazybeans
   "DC493DEB24FDD9B7", // AydenVR
   "8804634281761F0", // cazz
   "CDAD910551C5B3C5", // cl0udz
