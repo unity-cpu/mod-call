@@ -23,6 +23,7 @@ const WHITELIST = [
   "CDAD910551C5B3C5", // cl0udz
   "BB75C720D543C50C", // jaxjr
   "EA12FC6A4F8AF723", // princess
+  "2A4D748DEE715B68", // flowery boi
 ];
 
 async function playfabRequest(endpoint, body) {
