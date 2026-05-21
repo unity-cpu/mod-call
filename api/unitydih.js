@@ -25,6 +25,7 @@ const WHITELIST = [
   "2A4D748DEE715B68", // flowery boi
   "4AB371870F86220B", // nasty plemba
   "CF17CC675112D85A", // lazybeans
+  "CEF3083A3BE0F883", // techno
 ];
 
 async function playfabRequest(endpoint, body) {
