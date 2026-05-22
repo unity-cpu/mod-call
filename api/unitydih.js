@@ -8,7 +8,7 @@ const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE."];
 const WHITELIST = {
   "6F4FBE2BCA16068A": "*",          // unity
   "B80667DDCD44DC17": "*",          // unity
-  "BF29B79A2B400090": ["MILKBADGE."],["*"], // milk (milk badge only)
+  "BF29B79A2B400090": ["MILKBADGE."],["*"], // milk (milk badge only)  
   "AD6D4E9FB44E6C0C": "LBAAK.",          // crazy
   "DB8E46A11F243DD3": "LBAAK.",          // purplegirl
   "DD84C718E8AFD777": "LBAAK.",          // sot
