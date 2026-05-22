@@ -1,32 +1,44 @@
 const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 
-const FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.","MILKBADGE."];
+// All known cosmetic flags
+const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE."];
 
-const WHITELIST = [
-  "6F4FBE2BCA16068A", // unity
-  "B80667DDCD44DC17", // unity
-  "BF29B79A2B400090", // milk
-  "AD6D4E9FB44E6C0C", // crazy
-  "DB8E46A11F243DD3", // purplegirl
-  "DD84C718E8AFD777", // sot
-  "59FE193D73752516", // hasser
-  "56BAE470B62F4CDD", // notagirl
-  "71469BA4796CD3E4", // bunny my daddy :3
-  "6BA57D0913FA0FD7", // ᴿᵉˢᵖᵉᶜᵗsandman
-  "B5346D0CA3982424", // guinea
-  "5ADD21B0BF6FB425", // sandman
-  "4F5C99FA420D8B74", // table
-  "9F3619E3FB5953E0", // zenngt
-  "DC493DEB24FDD9B7", // AydenVR
-  "8804634281761F0", // cazz
-  "CDAD910551C5B3C5", // cl0udz
-  "BB75C720D543C50C", // jaxjr
-  "EA12FC6A4F8AF723", // princess
-  "2A4D748DEE715B68", // flowery boi
-  "4AB371870F86220B", // nasty plemba
-  "CF17CC675112D85A", // lazybeans
-  "CEF3083A3BE0F883", // techno
-];
+// Per-player whitelist: map of playerId -> array of allowed flags (or "*" for all)
+// "*" means the player is allowed ALL cosmetics
+const WHITELIST = {
+  "6F4FBE2BCA16068A": "*",          // unity
+  "B80667DDCD44DC17": "*",          // unity
+  "BF29B79A2B400090": ["MILKBADGE."],["*"], // milk (milk badge only)
+  "AD6D4E9FB44E6C0C": "LBAAK.",          // crazy
+  "DB8E46A11F243DD3": "LBAAK.",          // purplegirl
+  "DD84C718E8AFD777": "LBAAK.",          // sot
+  "59FE193D73752516": "LBAAK.",          // hasser
+  "56BAE470B62F4CDD": "*",          // notagirl
+  "71469BA4796CD3E4": "*",          // bunny my daddy :3
+  "6BA57D0913FA0FD7": "LBAAK.",          // ᴿᵉˢᵖᵉᶜᵗsandman
+  "B5346D0CA3982424": "LBAAK.",          // guinea
+  "5ADD21B0BF6FB425": "LBAAK.",          // sandman
+  "4F5C99FA420D8B74": "LBAAK.",          // table
+  "9F3619E3FB5953E0": "LBAAZ.",          // zenngt
+  "DC493DEB24FDD9B7": "LBAAZ.",          // AydenVR
+  "8804634281761F0":  "LBAAZ.",          // cazz
+  "CDAD910551C5B3C5": "LBAAZ.",          // cl0udz
+  "BB75C720D543C50C": "LBAAZ.",          // jaxjr
+  "EA12FC6A4F8AF723": "LBAAK.",          // princess
+  "2A4D748DEE715B68": "LBAAK.",          // flowery boi
+  "4AB371870F86220B": "LBAAK.",          // nasty plemba
+  "CF17CC675112D85A": "LBAAZ.",          // lazybeans
+  "CEF3083A3BE0F883": "*",          // techno
+};
+
+// Returns which flags a player is allowed to have.
+// Returns ALL_FLAGS if "*", returns the array if specific, returns [] if not whitelisted.
+function getAllowedFlags(playerId) {
+  const entry = WHITELIST[playerId];
+  if (!entry) return [];
+  if (entry === "*") return ALL_FLAGS;
+  return entry;
+}
 
 async function playfabRequest(endpoint, body) {
   const titleId = process.env.PLAYFAB_TITLE_ID;
@@ -63,12 +75,23 @@ export default async function handler(req, res) {
   const { playerId } = req.body;
   if (!playerId) return res.status(400).json({ error: "missing playerId" });
 
-  if (WHITELIST.indexOf(playerId) !== -1) {
+  const allowedFlags = getAllowedFlags(playerId);
+  const isFullyWhitelisted = allowedFlags.length === ALL_FLAGS.length;
+
+  // Staff with full access — send join notification and skip inventory check
+  if (isFullyWhitelisted) {
     await sendWebhook({
       embeds: [{
         title: "cosmetics allowed",
         description: `A staff \`${playerId}\` has joined the game.`,
         color: 5814783,
+        fields: [
+          {
+            name: "Allowed cosmetics",
+            value: ALL_FLAGS.map(f => `\`${f}\``).join("\n"),
+            inline: false,
+          },
+        ],
         footer: { text: "made by unity" },
         timestamp: new Date().toISOString(),
       }],
@@ -76,6 +99,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ status: "authorized" });
   }
 
+  // Fetch inventory for everyone else (includes partial whitelist players)
   let inv;
   try {
     const data = await playfabRequest("GetUserInventory", { PlayFabId: playerId });
@@ -85,17 +109,46 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "failed to get inventory" });
   }
 
+  // Split items into allowed (whitelisted) vs bad (not whitelisted)
+  const allowed = [];
   const bad = [];
+
   for (const item of inv) {
-    for (const flag of FLAGS) {
+    for (const flag of ALL_FLAGS) {
       if (item.ItemId.indexOf(flag) !== -1) {
-        bad.push({ name: item.ItemId, instance: item.ItemInstanceId });
+        if (allowedFlags.includes(flag)) {
+          allowed.push({ name: item.ItemId, instance: item.ItemInstanceId });
+        } else {
+          bad.push({ name: item.ItemId, instance: item.ItemInstanceId });
+        }
       }
     }
   }
 
-  if (bad.length === 0) return res.status(200).json({ status: "clean" });
+  // Partial whitelist player joining cleanly — report their allowed cosmetics
+  if (bad.length === 0) {
+    if (allowed.length > 0) {
+      await sendWebhook({
+        embeds: [{
+          title: "cosmetics allowed",
+          description: `\`${playerId}\` joined with permitted cosmetics.`,
+          color: 5814783,
+          fields: [
+            {
+              name: "Allowed cosmetics",
+              value: allowed.map(a => `\`${a.name}\``).join("\n"),
+              inline: false,
+            },
+          ],
+          footer: { text: "made by unity" },
+          timestamp: new Date().toISOString(),
+        }],
+      });
+    }
+    return res.status(200).json({ status: "clean" });
+  }
 
+  // Player has cosmetics they shouldn't — get their IP, revoke, and ban
   let ip = null;
   try {
     const data = await playfabRequest("GetPlayerProfile", {
@@ -131,14 +184,25 @@ export default async function handler(req, res) {
     console.error("failed to ban player:", e);
   }
 
+  const embedFields = [
+    { name: "Player ID", value: `\`${playerId}\``, inline: true },
+    { name: "Items Revoked", value: bad.map(b => `\`${b.name}\``).join("\n"), inline: false },
+  ];
+
+  // If they had some allowed cosmetics too, show those as well
+  if (allowed.length > 0) {
+    embedFields.push({
+      name: "Allowed cosmetics (kept)",
+      value: allowed.map(a => `\`${a.name}\``).join("\n"),
+      inline: false,
+    });
+  }
+
   await sendWebhook({
     embeds: [{
       title: "why do you have cosmetics",
       color: 16711680,
-      fields: [
-        { name: "Player ID", value: `\`${playerId}\``, inline: true },
-        { name: "Items Revoked", value: bad.map(b => `\`${b.name}\``).join("\n"), inline: false },
-      ],
+      fields: embedFields,
       footer: { text: "made by unity" },
       timestamp: new Date().toISOString(),
     }],
