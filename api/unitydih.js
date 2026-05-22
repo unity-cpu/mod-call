@@ -131,7 +131,7 @@ export default async function handler(req, res) {
       await sendWebhook({
         embeds: [{
           title: "cosmetics allowed",
-          description: `\`${playerId}\` joined with permitted cosmetics.`,
+          description: `\`${playerId}\` joined with staff cosmetics.`,
           color: 5814783,
           fields: [
             {
