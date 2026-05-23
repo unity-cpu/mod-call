@@ -29,6 +29,7 @@ const WHITELIST = {
   "4AB371870F86220B": "LBAAK.",          // nasty plemba
   "CF17CC675112D85A": "LBAAZ.",          // lazybeans
   "CEF3083A3BE0F883": "*",          // techno
+  "2A4D748DEE715B68": "*", //FLOWERY
 };
 
 // Returns which flags a player is allowed to have.
