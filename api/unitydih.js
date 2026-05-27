@@ -195,7 +195,7 @@ export default async function handler(req, res) {
   // If they had some allowed cosmetics too, show those as well
   if (allowed.length > 0) {
     embedFields.push({
-      name: "Allowed cosmetics (kept)",
+      name: "Allowed cosmetics",
       value: allowed.map(a => `\`${a.name}\``).join("\n"),
       inline: false,
     });
