@@ -1,4 +1,4 @@
-const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
+K const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 
 // All known cosmetic flags
 const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE."];
@@ -17,7 +17,6 @@ const WHITELIST = {
   "71469BA4796CD3E4": "*",       // bunny my daddy :3
   "6BA57D0913FA0FD7": "LBAAK.",          // ᴿᵉˢᵖᵉᶜᵗsandman
   "B5346D0CA3982424": "LBAAK.",          // guinea
-  "5ADD21B0BF6FB425": "LBAAK.",          // sandman
   "4F5C99FA420D8B74": ["LBAAK.", "LBAAZ."],          // table
   "9F3619E3FB5953E0": "LBAAZ.",          // zenngt
   "DC493DEB24FDD9B7": "LBAAZ.",          // AydenVR
