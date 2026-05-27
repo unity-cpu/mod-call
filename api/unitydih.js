@@ -18,7 +18,7 @@ const WHITELIST = {
   "6BA57D0913FA0FD7": "LBAAK.",          // ᴿᵉˢᵖᵉᶜᵗsandman
   "B5346D0CA3982424": "LBAAK.",          // guinea
   "5ADD21B0BF6FB425": "LBAAK.",          // sandman
-  "4F5C99FA420D8B74": "LBAAK.", "LBAAZ.",          // table
+  "4F5C99FA420D8B74": ["LBAAK.", "LBAAZ."],          // table
   "9F3619E3FB5953E0": "LBAAZ.",          // zenngt
   "DC493DEB24FDD9B7": "LBAAZ.",          // AydenVR
   "8804634281761F0":  "LBAAZ.",          // cazz
@@ -29,8 +29,8 @@ const WHITELIST = {
   "4AB371870F86220B": "LBAAK.",          // nasty plemba
   "CF17CC675112D85A": "LBAAZ.",          // lazybeans
   "CEF3083A3BE0F883": "*",          // techno
-  "2A4D748DEE715B68": "LBAAK.", "LBAAZ.", //FLOWERY
-  "7F5D7550CC93FFE6": "LBAAK.", "LBAAZ.", //GUINEA
+  "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],   // FLOWERY ← fixed (also removed duplicate entry)
+  "7F5D7550CC93FFE6": ["LBAAK.", "LBAAZ."],   // GUINEA ← fixed
 };
 
 // Returns which flags a player is allowed to have.
@@ -39,7 +39,8 @@ function getAllowedFlags(playerId) {
   const entry = WHITELIST[playerId];
   if (!entry) return [];
   if (entry === "*") return ALL_FLAGS;
-  return entry;
+  if (Array.isArray(entry)) return entry;
+  return [entry];
 }
 
 async function playfabRequest(endpoint, body) {
