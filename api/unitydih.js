@@ -1,7 +1,7 @@
 const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 
 // All known cosmetic flags
-const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE."];
+const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FORESTGUIDE."];
 
 // Per-player whitelist: map of playerId -> array of allowed flags (or "*" for all)
 // "*" means the player is allowed ALL cosmetics
