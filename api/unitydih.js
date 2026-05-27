@@ -14,7 +14,7 @@ const WHITELIST = {
   "DD84C718E8AFD777": "LBAAK.",          // sot
   "59FE193D73752516": "LBAAK.",          // hasser
   "56BAE470B62F4CDD": "*",          // notagirl
-  "71469BA4796CD3E4": "*",          // bunny my daddy :3
+  "71469BA4796CD3E4": ["LBAAK.", "LBAAZ."],       // bunny my daddy :3
   "6BA57D0913FA0FD7": "LBAAK.",          // ᴿᵉˢᵖᵉᶜᵗsandman
   "B5346D0CA3982424": "LBAAK.",          // guinea
   "5ADD21B0BF6FB425": "LBAAK.",          // sandman
@@ -31,7 +31,7 @@ const WHITELIST = {
   "CEF3083A3BE0F883": "*",          // techno
   "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],   // FLOWERY ← fixed (also removed duplicate entry)
   "7F5D7550CC93FFE66": ["LBAAK.", "LBAAZ."],   // GUINEA ← fixed
-  "DD84C718E8AFD777": "*",//sot
+  "DD84C718E8AFD777":  ["LBAAK.", "LBAAZ."], //sot
 };
 
 // Returns which flags a player is allowed to have.
