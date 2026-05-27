@@ -31,6 +31,7 @@ const WHITELIST = {
   "CEF3083A3BE0F883": "*",          // techno
   "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],   // FLOWERY ← fixed (also removed duplicate entry)
   "7F5D7550CC93FFE66": ["LBAAK.", "LBAAZ."],   // GUINEA ← fixed
+  "DD84C718E8AFD777": "*",//sot
 };
 
 // Returns which flags a player is allowed to have.
