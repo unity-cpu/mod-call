@@ -189,7 +189,7 @@ export default async function handler(req, res) {
 
   const embedFields = [
     { name: "Player ID", value: `\`${playerId}\``, inline: true },
-    { name: "Items Taken", value: bad.map(b => `\`${b.name}\``).join("\n"), inline: false },
+    { name: "cos taken", value: bad.map(b => `\`${b.name}\``).join("\n"), inline: false },
   ];
 
   // If they had some allowed cosmetics too, show those as well
