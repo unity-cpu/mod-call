@@ -1,4 +1,4 @@
-K const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
+const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 
 // All known cosmetic flags
 const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE."];
