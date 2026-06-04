@@ -8,7 +8,7 @@ const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE."];
 const WHITELIST = {
   "6F4FBE2BCA16068A": "*",          // unity
   "B80667DDCD44DC17": "*",          // unity
-  "BF29B79A2B400090": "*", // milk (milk badge only)  
+  "BF29B79A2B400090": "*", // milk
   "AD6D4E9FB44E6C0C": "LBAAK.",          // crazy
   "DB8E46A11F243DD3": "LBAAK.",          // purplegirl
   "DD84C718E8AFD777": "LBAAK.",          // sot
@@ -28,8 +28,8 @@ const WHITELIST = {
   "4AB371870F86220B": "LBAAK.",          // nasty plemba
   "CF17CC675112D85A": "LBAAZ.",          // lazybeans
   "CEF3083A3BE0F883": "*",          // techno
-  "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],   // FLOWERY ← fixed (also removed duplicate entry)
-  "7F5D7550CC93FFE66": ["LBAAK.", "LBAAZ."],   // GUINEA ← fixed
+  "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],   // FLOWERY
+  "7F5D7550CC93FFE66": ["LBAAK.", "LBAAZ."],   // GUINEA
   "DD84C718E8AFD777":  ["LBAAK.", "LBAAZ."], //sot
   "A1E0B337A62E068E": "*",//CRAZY
 };
