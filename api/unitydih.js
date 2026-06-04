@@ -20,9 +20,9 @@ const WHITELIST = {
   "4F5C99FA420D8B74": ["LBAAK.", "LBAAZ."],          // table
   "9F3619E3FB5953E0": "LBAAZ.",          // zenngt
   "DC493DEB24FDD9B7": "LBAAZ.",          // AydenVR
-  "8804634281761F0":  "LBAAZ.",          // cazz
+  "8804634281761F0":  ["LBAAK.", "LBAAZ."],          // cazz
   "CDAD910551C5B3C5": "LBAAZ.",          // cl0udz
-  "BB75C720D543C50C": "LBAAZ.",          // jaxjr
+  "BB75C720D543C50C": ["LBAAK.", "LBAAZ."],          // jaxjr
   "EA12FC6A4F8AF723": "LBAAK.",          // princess
   "2A4D748DEE715B68": "LBAAK.",          // flowery boi
   "4AB371870F86220B": "LBAAK.",          // nasty plemba
