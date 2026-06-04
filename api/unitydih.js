@@ -13,7 +13,7 @@ const WHITELIST = {
   "DB8E46A11F243DD3": "LBAAK.",          // purplegirl
   "DD84C718E8AFD777": "LBAAK.",          // sot
   "59FE193D73752516": "LBAAK.",          // hasser
-  "56BAE470B62F4CDD": "*",          // notagirl
+  "56BAE470B62F4CDD": "LBAAK.",           // notagirl
   "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "LBAAD."],        // bunny
   "6BA57D0913FA0FD7": "LBAAK.",          // ᴿᵉˢᵖᵉᶜᵗsandman
   "B5346D0CA3982424": "LBAAK.",          // guinea
