@@ -10,6 +10,7 @@ const WHITELIST = {
   "B80667DDCD44DC17": "*",          // unity
   "BF29B79A2B400090": "*", // milk
   "AD6D4E9FB44E6C0C": "LBAAK.",          // crazy
+  "56BAE470B62F4CDD": "*",          // notagirl
   "DB8E46A11F243DD3": "LBAAK.",          // purplegirl
   "DD84C718E8AFD777": "LBAAK.",          // sot
   "59FE193D73752516": "LBAAK.",          // hasser
