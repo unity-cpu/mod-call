@@ -33,6 +33,11 @@ const WHITELIST = {
   "7F5D7550CC93FFE66": ["LBAAK.", "LBAAZ."],   // GUINEA
   "DD84C718E8AFD777":  ["LBAAK.", "LBAAZ."], //sot
   "A1E0B337A62E068E": "*",//CRAZY
+  "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],//mrsandman
+  "35764A5E18580CF": ["LBAAK.", "LBAAZ."],//cat
+  "8F5748B622B6F323": ["LBAAK.", "LBAAZ."],//flowers
+  "8804634281761F0": ["LBAAK.", "LBAAZ."],//cazz
+  
 };
 
 // Returns which flags a player is allowed to have.
