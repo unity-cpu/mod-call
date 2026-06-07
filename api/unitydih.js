@@ -37,6 +37,7 @@ const WHITELIST = {
   "35764A5E18580CF": ["LBAAK.", "LBAAZ."],//cat
   "8F5748B622B6F323": ["LBAAK.", "LBAAZ."],//flowers
   "8804634281761F0": ["LBAAK.", "LBAAZ."],//cazz
+  "DB8E46A11F243DD3": "*",//purplegirl
   
 };
 
