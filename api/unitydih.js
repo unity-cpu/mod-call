@@ -35,7 +35,7 @@ const WHITELIST = {
   "A1E0B337A62E068E": "*",//CRAZY
   "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],//mrsandman
   "35764A5E18580CF": ["LBAAK.", "LBAAZ."],//cat
-  "8F5748B622B6F323": ["LBAAK.", "LBAAZ."],//flowers
+  "8F5748B622B6F323": "*",//flowers
   "8804634281761F0": ["LBAAK.", "LBAAZ."],//cazz
   "DB8E46A11F243DD3": "*",//purplegirl
   "4996F0141EF41D1E": ["LBAAK.", "LBAAZ."],//flapjacks
