@@ -41,6 +41,7 @@ const WHITELIST = {
   "4996F0141EF41D1E": ["LBAAK.", "LBAAZ."],//flapjacks
   "79598F060F96210E": ["LBAAK.", "LBAAZ."],//draco
   "C2619AF7FA41850": "LBAAK.",//knpo
+  "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."]//sin
   
   
 };
