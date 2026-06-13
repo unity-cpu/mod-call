@@ -37,6 +37,7 @@ const WHITELIST = {
   "C2619AF7FA41850": "LBAAK.",  // knpo
   "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."],  // sin
   "65": "COFOUNDER.",  // 45
+  "8F5748B622B6F323": "LBAAD.",
 };
 
 // Returns which flags a player is allowed to have.
