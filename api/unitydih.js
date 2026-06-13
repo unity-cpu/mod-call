@@ -6,38 +6,42 @@ const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FO
 // Per-player whitelist: map of playerId -> array of allowed flags (or "*" for all)
 // "*" means the player is allowed ALL cosmetics
 const WHITELIST = {
-  "6F4FBE2BCA16068A": "*"  // unity,,
-  "B80667DDCD44DC17": "*"  // unity,,
-  "BF29B79A2B400090": "*"  // milk,,
-  "AD6D4E9FB44E6C0C": "LBAAK."  // crazy,,
-  "56BAE470B62F4CDD": "LBAAK."  // notagirl,,
-  "DB8E46A11F243DD3": "*"  // purplegirl,,
-  "DD84C718E8AFD777": ["LBAAK.", "LBAAZ."]  // sot,,
-  "59FE193D73752516": "LBAAK."  // hasser,,
-  "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "LBAAD.", "FORESTGUIDE."]  // bunny,,
-  "6BA57D0913FA0FD7": "LBAAK."  // ᴿᵉˢᵖᵉᶜᵗsandman,,
-  "B5346D0CA3982424": "LBAAK."  // guinea,,
-  "4F5C99FA420D8B74": ["LBAAK.", "LBAAZ."]  // table,,
-  "9F3619E3FB5953E0": "LBAAZ."  // zenngt,,
-  "DC493DEB24FDD9B7": "LBAAZ."  // AydenVR,,
-  "8804634281761F0": ["LBAAK.", "LBAAZ."]  // cazz,,
-  "CDAD910551C5B3C5": ["LBAAK.", "LBAAZ."]  // cl0udz,,
-  "BB75C720D543C50C": ["LBAAK.", "LBAAZ."]  // jaxjr,,
-  "EA12FC6A4F8AF723": "LBAAK."  // princess,,
-  "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."]  // FLOWERY,,
-  "4AB371870F86220B": "LBAAK."  // nasty plemba,,
-  "CF17CC675112D85A": "LBAAZ."  // lazybeans,,
-  "CEF3083A3BE0F883": "*"  // techno,,
-  "7F5D7550CC93FFE66": ["LBAAK.", "LBAAZ."]  // GUINEA,,
-  "A1E0B337A62E068E": "*"  // CRAZY,,
-  "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."]  // mrsandman,,
-  "35764A5E18580CF": ["LBAAK.", "LBAAZ."]  // cat,,
-  "8F5748B622B6F323": "*"  // flowers,,
-  "4996F0141EF41D1E": ["LBAAK.", "LBAAZ."]  // flapjacks,,
-  "79598F060F96210E": ["LBAAK.", "LBAAZ."]  // draco,,
-  "C2619AF7FA41850": "LBAAK."  // knpo,,
-  "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."]  // sin,,
-  "67": ["COFOUNDER.", "MILKBADGE."]  // 65
+  "6F4FBE2BCA16068A": "*",          // unity
+  "B80667DDCD44DC17": "*",          // unity
+  "BF29B79A2B400090": "*",          // milk
+  "AD6D4E9FB44E6C0C": "LBAAK.",     // crazy
+  "56BAE470B62F4CDD": "*",          // notagirl
+  "DB8E46A11F243DD3": "LBAAK.",     // purplegirl
+  "DD84C718E8AFD777": "LBAAK.",     // sot
+  "59FE193D73752516": "LBAAK.",     // hasser
+  "56BAE470B62F4CDD": "LBAAK.",     // notagirl
+  "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "LBAAD.", "FORESTGUIDE."],  // bunny
+  "6BA57D0913FA0FD7": "LBAAK.",     // ᴿᵉˢᵖᵉᶜᵗsandman
+  "B5346D0CA3982424": "LBAAK.",     // guinea
+  "4F5C99FA420D8B74": ["LBAAK.", "LBAAZ."],  // table
+  "9F3619E3FB5953E0": "LBAAZ.",     // zenngt
+  "DC493DEB24FDD9B7": "LBAAZ.",     // AydenVR
+  "8804634281761F0":  ["LBAAK.", "LBAAZ."],  // cazz
+  "CDAD910551C5B3C5": ["LBAAK.", "LBAAZ."],  // cl0udz
+  "BB75C720D543C50C": ["LBAAK.", "LBAAZ."],  // jaxjr
+  "EA12FC6A4F8AF723": "LBAAK.",     // princess
+  "2A4D748DEE715B68": "LBAAK.",     // flowery boi
+  "4AB371870F86220B": "LBAAK.",     // nasty plemba
+  "CF17CC675112D85A": "LBAAZ.",     // lazybeans
+  "CEF3083A3BE0F883": "*",          // techno
+  "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],  // FLOWERY
+  "7F5D7550CC93FFE66": ["LBAAK.", "LBAAZ."],  // GUINEA
+  "DD84C718E8AFD777": ["LBAAK.", "LBAAZ."],  // sot
+  "A1E0B337A62E068E": "*",          // CRAZY
+  "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],  // mrsandman
+  "35764A5E18580CF": ["LBAAK.", "LBAAZ."],   // cat
+  "8F5748B622B6F323": "*",          // flowers
+  "8804634281761F0": ["LBAAK.", "LBAAZ."],   // cazz
+  "DB8E46A11F243DD3": "*",          // purplegirl
+  "4996F0141EF41D1E": ["LBAAK.", "LBAAZ."],  // flapjacks
+  "79598F060F96210E": ["LBAAK.", "LBAAZ."],  // draco
+  "C2619AF7FA41850": "LBAAK.",      // knpo
+  "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."]  // sin
 };
 
 // Returns which flags a player is allowed to have.
