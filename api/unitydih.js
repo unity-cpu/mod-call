@@ -3,6 +3,35 @@ const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 // All known cosmetic flags
 const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FORESTGUIDE."];
 
+// Staff names (from your backend / config)
+const STAFF_NAMES = {
+  "6F4FBE2BCA16068A": "Tempted",
+  "B80667DDCD44DC17": "Tempted",
+  "BF29B79A2B400090": "Milk",
+  "DB8E46A11F243DD3": "purplegirl",
+  "DD84C718E8AFD777": "SOT",
+  "B716F79A9FC37CC9": "DADDY TOAST :33",
+  "59FE193D73752516": "Hasser",
+  "5433C00BD5343624": "Jax",
+  "56BAE470B62F4CDD": "Notagirl",
+  "71469BA4796CD3E4": "no bunny",
+  "5ADD21B0BF6FB425": "sandman",
+  "CDAD910551C5B3C5": "Cl0udz",
+  "BB75C720D543C50C": "JAXJR",
+  "EA12FC6A4F8AF723": "PRINCESS",
+  "2A4D748DEE715B68": "FLOWERY BOI",
+  "4AB371870F86220B": "NASTY PLEMBA",
+  "CEF3083A3BE0F883": "Techno",
+  "4F5C99FA420D8B74": "table",
+  "8F5748B622B6F323": "MOMMY FLOWERS :3",
+  "7F5D7550CC93FFE6": "UNDERAGE GUINEA",
+  "A1E0B337A62E068E": "crazy",
+  "35764A5E18580CF": "cat",
+  "8804634281761F0": "CASS",
+  "BE8B92C281A82DC5": "Notagirl",
+  "B5346D0CA3982424": "GUINEA"
+};
+
 // Per-player whitelist: map of playerId -> array of allowed flags (or "*" for all)
 // "*" means the player is allowed ALL cosmetics
 const WHITELIST = {
@@ -91,10 +120,12 @@ export default async function handler(req, res) {
 
   // Staff with full access — send join notification and skip inventory check
   if (isFullyWhitelisted) {
+    // Get staff name from backend mapping
+    const staffName = STAFF_NAMES[playerId] || "unknown staff";
     await sendWebhook({
       embeds: [{
         title: "cosmetics allowed",
-        description: `A staff \`${playerId}\` has joined the game.`,
+        description: `**${staffName}** (\`${playerId}\`) has joined the game.`,
         color: 5814783,
         fields: [
           {
