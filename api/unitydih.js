@@ -38,6 +38,7 @@ const WHITELIST = {
   "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."],  // sin
   "65": "COFOUNDER.",  // 45
   "8F5748B622B6F323": "*",
+  "B716F79A9FC37CC9": "*",  // toast
 };
 
 // Returns which flags a player is allowed to have.
