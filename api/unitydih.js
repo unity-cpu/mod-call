@@ -6,6 +6,7 @@ const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FO
 // Per-player whitelist: map of playerId -> array of allowed flags (or "*" for all)
 // "*" means the player is allowed ALL cosmetics
 const WHITELIST = {
+  "6F4FBE2BCA16068A": "*",  // unity
   "B80667DDCD44DC17": "*"  // unity,,
   "BF29B79A2B400090": "*"  // milk,,
   "AD6D4E9FB44E6C0C": "LBAAK."  // crazy,,
