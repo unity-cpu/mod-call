@@ -65,7 +65,6 @@ const WHITELIST = {
   "C2619AF7FA41850": ["LBAAK.", "LBAAZ."],  // knpo
   "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."],  // sin
   "65": "COFOUNDER.",  // 45
-  "8F5748B622B6F323": "*",
   "B716F79A9FC37CC9": "*",  // toast
 };
 
