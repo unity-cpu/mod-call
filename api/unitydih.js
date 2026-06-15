@@ -45,7 +45,7 @@ const WHITELIST = {
   "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "LBAAD.", "FORESTGUIDE."],  // bunny
   "6BA57D0913FA0FD7": "LBAAK.",  // ᴿᵉˢᵖᵉᶜᵗsandman
   "B5346D0CA3982424": "LBAAK.",  // guinea
-  "4F5C99FA420D8B74": ["LBAAK.", "LBAAZ."],  // table
+  "4F5C99FA420D8B74": ["LBAAK.", "LBAAZ.", "LBAAD."],  // TABLE
   "9F3619E3FB5953E0": "LBAAZ.",  // zenngt
   "DC493DEB24FDD9B7": "LBAAZ.",  // AydenVR
   "8804634281761F0": ["LBAAK.", "LBAAZ."],  // cazz
