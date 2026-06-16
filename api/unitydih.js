@@ -66,7 +66,6 @@ const WHITELIST = {
   "B716F79A9FC37CC9": "*",  // toast
   "8F5748B622B6F323": "*",  // Flowers
   "532CC7565FB89085": "*",  // flowers
-  "67": "COFOUNDER.",
 };
 
 // Returns which flags a player is allowed to have.
