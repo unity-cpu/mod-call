@@ -67,6 +67,7 @@ const WHITELIST = {
   "8F5748B622B6F323": "*",  // Flowers
   "532CC7565FB89085": "*",  // flowers
   "571C8CBFB8AE77CE": "LBAAZ.",  // milo
+  "A323BD691D53346D": "LBAAK.",  // Hasserjr
 };
 
 // Returns which flags a player is allowed to have.
