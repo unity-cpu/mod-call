@@ -62,16 +62,12 @@ const WHITELIST = {
   "4996F0141EF41D1E": ["LBAAK.", "LBAAZ."],  // flapjacks
   "C2619AF7FA41850": ["LBAAK.", "LBAAZ."],  // knpo
   "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."],  // sin
-  "65": "COFOUNDER.",  // 45
   "B716F79A9FC37CC9": "*",  // toast
   "8F5748B622B6F323": "*",  // Flowers
-  "532CC7565FB89085": "*",  // flowers
-  "571C8CBFB8AE77CE": "LBAAZ.",  // milo
+  "532CC7565FB89085": "*",  // flower
   "A323BD691D53346D": "LBAAK.",  // Hasserjr
   "5433C00BD5343624": "LBAAK.",  // JAX
   "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // bunny
-  "857D1E85574C9130": ["FORESTGUIDE.", "LBAAK."],  // f1
-  "87D7E52745FE25D2": "*",  // carbon
 };
 
 // Returns which flags a player is allowed to have.
