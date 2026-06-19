@@ -71,6 +71,7 @@ const WHITELIST = {
   "5433C00BD5343624": "LBAAK.",  // JAX
   "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // bunny
   "857D1E85574C9130": ["FORESTGUIDE.", "LBAAK."],  // f1
+  "87D7E52745FE25D2": "*",  // carbon
 };
 
 // Returns which flags a player is allowed to have.
