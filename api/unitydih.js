@@ -228,7 +228,7 @@ export default async function handler(req, res) {
 
   // Use CC-specific ban reason if applicable, otherwise default
   const banReason = isCC
-    ? "no content creator cosmetics for u"
+    ? "no content creator cosmetics for u -MAKE A TICKET AND REQUEST PLAYFAB ACCESS TO GET THE COS AND GET RID OF THE BAN"
     : "NO COSMETICS FOR YOU BOI -MAKE A TICKET AND REQUEST UNITY TO APPEL THE BAN";
 
   try {
