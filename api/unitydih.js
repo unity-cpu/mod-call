@@ -67,6 +67,7 @@ const WHITELIST = {
   "A323BD691D53346D": "LBAAK.",  // Hasserjr
   "5433C00BD5343624": "LBAAK.",  // JAX
   "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // bunny
+  "C7FA6FECFEAE36F0": "LBAAZ.",  // awesomefrog2
 };
 
 // Content creator whitelist: playerId -> name
