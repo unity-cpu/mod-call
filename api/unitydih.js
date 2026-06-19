@@ -1,7 +1,7 @@
 const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 
 // All known cosmetic flags
-const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FORESTGUIDE."];
+const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FORESTGUIDE.", "LBADE.", "ILLUSTRATOR.", "MMSHIRT." ];
 
 // Staff names (from your backend / config)
 const STAFF_NAMES = {
@@ -32,7 +32,6 @@ const STAFF_NAMES = {
 };
 
 // Per-player whitelist: map of playerId -> array of allowed flags (or "*" for all)
-// "*" means the player is allowed ALL cosmetics
 const WHITELIST = {
   "6F4FBE2BCA16068A": "*",  // unity
   "B80667DDCD44DC17": "*",  // unity
@@ -70,14 +69,23 @@ const WHITELIST = {
   "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // bunny
 };
 
-// Returns which flags a player is allowed to have.
-// Returns ALL_FLAGS if "*", returns the array if specific, returns [] if not whitelisted.
+// Content creator whitelist: playerId -> name
+// Managed via Discord bot cc-add / cc-remove commands
+const CONTENT_CREATOR_WHITELIST = {
+};
+
+// ── Helpers ──────────────────────────────────────────────────
+
 function getAllowedFlags(playerId) {
   const entry = WHITELIST[playerId];
   if (!entry) return [];
   if (entry === "*") return ALL_FLAGS;
   if (Array.isArray(entry)) return entry;
   return [entry];
+}
+
+function isContentCreator(playerId) {
+  return playerId in CONTENT_CREATOR_WHITELIST;
 }
 
 async function playfabRequest(endpoint, body) {
@@ -103,6 +111,8 @@ async function sendWebhook(payload) {
   });
 }
 
+// ── Handler ──────────────────────────────────────────────────
+
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "method not allowed" });
 
@@ -115,12 +125,13 @@ export default async function handler(req, res) {
   const { playerId } = req.body;
   if (!playerId) return res.status(400).json({ error: "missing playerId" });
 
-  const allowedFlags = getAllowedFlags(playerId);
+  const allowedFlags       = getAllowedFlags(playerId);
   const isFullyWhitelisted = allowedFlags.length === ALL_FLAGS.length;
+  const isCC               = isContentCreator(playerId);
+  const ccName             = isCC ? CONTENT_CREATOR_WHITELIST[playerId] : null;
 
-  // Staff with full access — send join notification and skip inventory check
+  // Full-access staff — send join notification and skip inventory check
   if (isFullyWhitelisted) {
-    // Get staff name from backend mapping
     const staffName = STAFF_NAMES[playerId] || "unknown staff";
     await sendWebhook({
       embeds: [{
@@ -141,7 +152,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ status: "authorized" });
   }
 
-  // Fetch inventory for everyone else (includes partial whitelist players)
+  // Fetch inventory for everyone else (partial whitelist + CCs + unknowns)
   let inv;
   try {
     const data = await playfabRequest("GetUserInventory", { PlayFabId: playerId });
@@ -151,7 +162,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "failed to get inventory" });
   }
 
-  // Split items into allowed (whitelisted) vs bad (not whitelisted)
+  // Split items into allowed vs bad
   const allowed = [];
   const bad = [];
 
@@ -167,13 +178,15 @@ export default async function handler(req, res) {
     }
   }
 
-  // Partial whitelist player joining cleanly — report their allowed cosmetics
+  // Clean join — report allowed cosmetics if any
   if (bad.length === 0) {
     if (allowed.length > 0) {
       await sendWebhook({
         embeds: [{
           title: "cosmetics allowed",
-          description: `\`${playerId}\` joined with staff cosmetics.`,
+          description: isCC
+            ? `🎥 **${ccName}** (\`${playerId}\`) [Content Creator] joined with staff cosmetics.`
+            : `\`${playerId}\` joined with staff cosmetics.`,
           color: 5814783,
           fields: [
             {
@@ -190,7 +203,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ status: "clean" });
   }
 
-  // Player has cosmetics they shouldn't — get their IP, revoke, and ban
+  // Player has cosmetics they shouldn't — get IP, revoke, and ban
   let ip = null;
   try {
     const data = await playfabRequest("GetPlayerProfile", {
@@ -213,12 +226,17 @@ export default async function handler(req, res) {
     }
   }
 
+  // Use CC-specific ban reason if applicable, otherwise default
+  const banReason = isCC
+    ? "no content creator cosmetics for u"
+    : "NO COSMETICS FOR YOU BOI -MAKE A TICKET AND REQUEST UNITY TO APPEL THE BAN";
+
   try {
     await playfabRequest("BanUsers", {
       Bans: [{
         PlayFabId: playerId,
         ...(ip && { IPAddress: ip }),
-        Reason: "NO COSMETICS FOR YOU BOI -MAKE A TICKET AND REQUEST UNITY TO APPEL THE BAN",
+        Reason: banReason,
         DurationInHours: 175200,
       }],
     });
@@ -227,11 +245,14 @@ export default async function handler(req, res) {
   }
 
   const embedFields = [
-    { name: "Player ID", value: `\`${playerId}\``, inline: true },
+    {
+      name: "Player ID",
+      value: isCC ? `\`${playerId}\` 🎥 **${ccName}** [Content Creator]` : `\`${playerId}\``,
+      inline: true,
+    },
     { name: "cos taken", value: bad.map(b => `\`${b.name}\``).join("\n"), inline: false },
   ];
 
-  // If they had some allowed cosmetics too, show those as well
   if (allowed.length > 0) {
     embedFields.push({
       name: "Allowed cosmetics",
@@ -242,7 +263,7 @@ export default async function handler(req, res) {
 
   await sendWebhook({
     embeds: [{
-      title: "why do you have cosmetics",
+      title: isCC ? "why do you have cosmetics [CC]" : "why do you have cosmetics",
       color: 16711680,
       fields: embedFields,
       footer: { text: "made by unity" },
