@@ -237,7 +237,7 @@ export default async function handler(req, res) {
         PlayFabId: playerId,
         ...(ip && { IPAddress: ip }),
         Reason: banReason,
-        DurationInHours: 175200,
+        DurationInHours: 1,
       }],
     });
   } catch (e) {
