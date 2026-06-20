@@ -82,6 +82,7 @@ const WHITELIST = {
 const CONTENT_CREATOR_WHITELIST = {
   "7F1D5737D28D4C97": "crow",  // crow
   "C7FA6FECFEAE36F0": "frog",  // frog
+  "AB3EC4775687C992": "TFM instinct",  // TFM instinct
 };
 
 // ── Helpers ──────────────────────────────────────────────────
