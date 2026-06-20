@@ -73,6 +73,7 @@ const WHITELIST = {
   "E7DF087A7D57AA49": "FORESTGUIDE.",  // Prince
   "57463AEA9D3A4DDE": "MMSHIRT.",  // zigzag [CC]
   "DC3D706F67A113F4": "MMSHIRT.",  // fredsvr [CC]
+  "F9310ABE4BCC9D4A": "MMSHIRT.",  // reaper
 };
 
 // Content creator whitelist: playerId -> name
