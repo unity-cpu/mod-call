@@ -83,6 +83,7 @@ const CONTENT_CREATOR_WHITELIST = {
   "12F1F839A85B44E7": "Cookievr",  // Cookievr
   "DE9F1EA52A984409": "Cookievr283",  // Cookievr283
   "57463AEA9D3A4DDE": "zigzag",  // zigzag
+  "DC3D706F67A113F4": "fredsvr",  // fredsvr
 };
 
 // ── Helpers ──────────────────────────────────────────────────
