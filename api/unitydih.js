@@ -73,6 +73,7 @@ const WHITELIST = {
   "E7DF087A7D57AA49": "FORESTGUIDE.",  // Prince
   "12F1F839A85B44E7": "MMSHIRT.",  // Cookievr
   "DE9F1EA52A984409": "MMSHIRT.",  // Cookievr283
+  "C4B858975AE5176D": "MMSHIRT.",  // Ryft
 };
 
 // Content creator whitelist: playerId -> name
