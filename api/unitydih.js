@@ -72,6 +72,7 @@ const WHITELIST = {
   "7F1D5737D28D4C97": ["MMSHIRT.", "LBAAK."],  // crow
   "E7DF087A7D57AA49": "FORESTGUIDE.",  // Prince
   "12F1F839A85B44E7": "MMSHIRT.",  // Cookievr
+  "D39F1EA52A985509": "MMSHIRT.",  // Cookievr283
 };
 
 // Content creator whitelist: playerId -> name
