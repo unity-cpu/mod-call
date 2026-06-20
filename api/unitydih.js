@@ -81,6 +81,7 @@ const CONTENT_CREATOR_WHITELIST = {
   "AB3EC4775687C992": "TFM instinct",  // TFM instinct
   "12F1F839A85B44E7": "Cookievr",  // Cookievr
   "DE9F1EA52A984409": "Cookievr283",  // Cookievr283
+  "57463AEA9D3A4DDE": "zigzag",  // zigzag
 };
 
 // ── Helpers ──────────────────────────────────────────────────
