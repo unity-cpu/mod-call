@@ -75,6 +75,7 @@ const WHITELIST = {
 // Content creator whitelist: playerId -> name
 // Managed via Discord bot cc-add / cc-remove commands
 const CONTENT_CREATOR_WHITELIST = {
+  "7F1D5737D28D4C97": "crow",  // crow
 };
 
 // ── Helpers ──────────────────────────────────────────────────
