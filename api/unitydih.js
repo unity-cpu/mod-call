@@ -1,7 +1,7 @@
 const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 
 // All known cosmetic flags
-const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FORESTGUIDE.", "LBADE.", "ILLUSTRATOR.", "MMSHIRT." ];
+const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FORESTGUIDE." ];
 
 // Staff names (from your backend / config)
 const STAFF_NAMES = {
