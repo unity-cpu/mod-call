@@ -93,6 +93,7 @@ const CONTENT_CREATOR_WHITELIST = {
   "63D509C4513DA1E5": "TBRGEKUPLAY",  // TBRGEKUPLAY
   "2590C0FB2C86E7B5": "horizon",  // horizon
   "C2619AF7FA41850": "knpo",  // knpo
+  "F9ACC85F5E8F8C": "eclipse",  // eclipse
 };
 
 // ── Helpers ──────────────────────────────────────────────────
