@@ -74,6 +74,7 @@ const WHITELIST = {
   "57463AEA9D3A4DDE": "MMSHIRT.",  // zigzag [CC]
   "DC3D706F67A113F4": "MMSHIRT.",  // fredsvr [CC]
   "F9310ABE4BCC9D4A": "MMSHIRT.",  // reaper
+  "8511A72B68482A3E": "MMSHIRT.",  // zyro [CC]
 };
 
 // Content creator whitelist: playerId -> name
