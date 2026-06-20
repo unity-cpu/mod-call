@@ -87,6 +87,7 @@ const CONTENT_CREATOR_WHITELIST = {
   "57463AEA9D3A4DDE": "zigzag",  // zigzag
   "DC3D706F67A113F4": "fredsvr",  // fredsvr
   "F9310ABE4BCC9D4A": "reaper",  // reaper
+  "8511A72B68482A3E": "zyro",  // zyro
 };
 
 // ── Helpers ──────────────────────────────────────────────────
