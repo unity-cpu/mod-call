@@ -76,6 +76,7 @@ const WHITELIST = {
 // Managed via Discord bot cc-add / cc-remove commands
 const CONTENT_CREATOR_WHITELIST = {
   "7F1D5737D28D4C97": "crow",  // crow
+  "C7FA6FECFEAE36F0": "frog",  // frog
 };
 
 // ── Helpers ──────────────────────────────────────────────────
