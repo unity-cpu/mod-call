@@ -74,7 +74,7 @@ const WHITELIST = {
   "12F1F839A85B44E7": "MMSHIRT.",  // Cookievr
   "DE9F1EA52A984409": "MMSHIRT.",  // Cookievr283
   "C4B858975AE5176D": "MMSHIRT.",  // Ryft
-  "AB3EC4775687C992": "MMSHIRT.",  // TFM instinct
+  "AB3EC4775687C992": "MMSHIRT.",  // TFM instinct [CC]
 };
 
 // Content creator whitelist: playerId -> name
