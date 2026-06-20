@@ -89,6 +89,7 @@ const CONTENT_CREATOR_WHITELIST = {
   "DC3D706F67A113F4": "fredsvr",  // fredsvr
   "F9310ABE4BCC9D4A": "reaper",  // reaper
   "8511A72B68482A3E": "zyro",  // zyro
+  "63D509C4513DA1E5": "TBRGEKUPLAY",  // TBRGEKUPLAY
 };
 
 // ── Helpers ──────────────────────────────────────────────────
