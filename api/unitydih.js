@@ -90,6 +90,7 @@ const CONTENT_CREATOR_WHITELIST = {
   "F9310ABE4BCC9D4A": "reaper",  // reaper
   "8511A72B68482A3E": "zyro",  // zyro
   "63D509C4513DA1E5": "TBRGEKUPLAY",  // TBRGEKUPLAY
+  "2590C0FB2C86E7B5": "horizon",  // horizon
 };
 
 // ── Helpers ──────────────────────────────────────────────────
