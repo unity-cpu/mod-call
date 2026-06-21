@@ -52,7 +52,7 @@ const WHITELIST = {
   "EA12FC6A4F8AF723": "LBAAK.",  // princess
   "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],  // FLOWERY
   "4AB371870F86220B": "LBAAK.",  // nasty plemba
-  "CF17CC675112D85A": "LBAAZ.",  // lazybeans
+  "CF17CC675112D85A": ["LBAAZ.", "LBAAK."],  // Lazybeans
   "CEF3083A3BE0F883": "*",  // techno
   "7F5D7550CC93FFE66": ["LBAAK.", "LBAAZ."],  // GUINEA
   "A1E0B337A62E068E": "*",  // CRAZY
