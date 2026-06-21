@@ -70,7 +70,7 @@ const WHITELIST = {
   "C7FA6FECFEAE36F0": ["MMSHIRT.", "LBAAZ.", "LBAAK."],  // awesomefrog
   "A8750682ABA4DDD1": "LBAAZ.",  // Flivz
   "7F1D5737D28D4C97": ["MMSHIRT.", "LBAAK."],  // crow
-  "E7DF087A7D57AA49": "FORESTGUIDE.",  // Prince
+  "E7DF087A7D57AA49": ["FORESTGUIDE.", "LBAAK."],  // prince
   "57463AEA9D3A4DDE": "MMSHIRT.",  // zigzag [CC]
   "DC3D706F67A113F4": "MMSHIRT.",  // fredsvr [CC]
   "F9310ABE4BCC9D4A": "MMSHIRT.",  // reaper
