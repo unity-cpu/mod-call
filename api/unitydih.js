@@ -58,7 +58,6 @@ const WHITELIST = {
   "A1E0B337A62E068E": "*",  // CRAZY
   "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],  // mrsandman
   "35764A5E18580CF": ["LBAAK.", "LBAAZ."],  // cat
-  "4996F0141EF41D1E": ["LBAAK.", "LBAAZ."],  // flapjacks
   "C2619AF7FA41850": ["LBAAK.", "LBAAZ."],  // knpo
   "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."],  // sin
   "B716F79A9FC37CC9": "*",  // toast
