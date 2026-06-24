@@ -74,7 +74,6 @@ const WHITELIST = {
   "DC3D706F67A113F4": "MMSHIRT.",  // fredsvr [CC]
   "F9310ABE4BCC9D4A": "MMSHIRT.",  // reaper
   "8511A72B68482A3E": "MMSHIRT.",  // zyro [CC]
-  "79598F060F96210E": "LBAAK.",  // draco
   "6D465E9DF79A4036": "LBAAK.",  // dh9a
   "857D1E85574C9130": "LBAAK.",  // f1
 };
