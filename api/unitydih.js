@@ -39,7 +39,6 @@ const WHITELIST = {
   "AD6D4E9FB44E6C0C": "LBAAK.",  // crazy
   "56BAE470B62F4CDD": "LBAAK.",  // notagirl
   "DB8E46A11F243DD3": "*",  // purplegirl
-  "DD84C718E8AFD777": ["LBAAK.", "LBAAZ."],  // sot
   "59FE193D73752516": "LBAAK.",  // hasser
   "6BA57D0913FA0FD7": "LBAAK.",  // ᴿᵉˢᵖᵉᶜᵗsandman
   "B5346D0CA3982424": "LBAAK.",  // guinea
