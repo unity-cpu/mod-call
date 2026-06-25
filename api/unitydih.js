@@ -60,7 +60,6 @@ const WHITELIST = {
   "35764A5E18580CF": ["LBAAK.", "LBAAZ."],  // cat
   "C2619AF7FA41850": ["LBAAK.", "LBAAZ."],  // knpo
   "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."],  // sin
-  "B716F79A9FC37CC9": "*",  // toast
   "8F5748B622B6F323": "*",  // Flowers
   "532CC7565FB89085": "*",  // flower
   "A323BD691D53346D": "LBAAK.",  // Hasserjr
