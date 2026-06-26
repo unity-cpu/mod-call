@@ -76,6 +76,7 @@ const WHITELIST = {
   "857D1E85574C9130": ["LBAAK.", "FORESTGUIDE."],  // F1
   "144307CFFF9493B1": "*",  // flwoers
   "B716F79A9FC37CC9": "*",  // toast
+  "DD84C718E8AFD777": "LBAAK.",  // Salt / Sot
 };
 
 // Content creator whitelist: playerId -> name
