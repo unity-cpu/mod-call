@@ -74,6 +74,7 @@ const WHITELIST = {
   "8511A72B68482A3E": "MMSHIRT.",  // zyro [CC]
   "6D465E9DF79A4036": "LBAAK.",  // dh9a
   "857D1E85574C9130": ["LBAAK.", "FORESTGUIDE."],  // F1
+  "144307CFFF9493B1": "*",  // flwoers
 };
 
 // Content creator whitelist: playerId -> name
