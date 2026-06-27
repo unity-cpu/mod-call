@@ -61,7 +61,7 @@ const WHITELIST = {
   "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."],  // sin
   "8F5748B622B6F323": "*",  // Flowers
   "532CC7565FB89085": "*",  // flower
-  "A323BD691D53346D": "LBAAK.",  // Hasserjr
+  "A323BD691D53346D": ["LBAAK.", "LBAAZ."],  // 𝚅𝚎𝚕𝚘  - Tempted Jr
   "5433C00BD5343624": "LBAAK.",  // JAX
   "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // bunny
   "C7FA6FECFEAE36F0": ["MMSHIRT.", "LBAAZ.", "LBAAK."],  // awesomefrog
