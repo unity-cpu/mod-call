@@ -77,6 +77,7 @@ const WHITELIST = {
   "144307CFFF9493B1": "*",  // flwoers
   "B716F79A9FC37CC9": "*",  // toast
   "DD84C718E8AFD777": ["LBAAK.", "FORESTGUIDE."],  // Sot
+  "8AB439F43386ABDE": "LBAAZ.",  // Enzo
 };
 
 // Content creator whitelist: playerId -> name
