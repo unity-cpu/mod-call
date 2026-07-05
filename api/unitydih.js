@@ -78,6 +78,7 @@ const WHITELIST = {
   "DD84C718E8AFD777": ["LBAAK.", "FORESTGUIDE."],  // Sot
   "8AB439F43386ABDE": "LBAAZ.",  // Enzo
   "D4C5246F8626183": "LBAAZ.",  // Gubba
+  "9F14D86AD3F591F8": "LBAAZ.",  // VP3
 };
 
 // Content creator whitelist: playerId -> name
