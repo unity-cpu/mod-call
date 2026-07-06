@@ -52,7 +52,6 @@ const WHITELIST = {
   "4AB371870F86220B": "LBAAK.",  // nasty plemba
   "CF17CC675112D85A": ["LBAAZ.", "LBAAK."],  // Lazybeans
   "CEF3083A3BE0F883": "*",  // techno
-  "7F5D7550CC93FFE66": ["LBAAK.", "LBAAZ."],  // GUINEA
   "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],  // mrsandman
   "35764A5E18580CF": ["LBAAK.", "LBAAZ."],  // cat
   "C2619AF7FA41850": ["LBAAK.", "LBAAZ."],  // knpo
