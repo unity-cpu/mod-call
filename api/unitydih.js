@@ -74,7 +74,7 @@ const WHITELIST = {
   "B716F79A9FC37CC9": "*",  // toast
   "DD84C718E8AFD777": ["LBAAK.", "FORESTGUIDE.", "COFOUNDER."],  // Salt / SOT
   "8AB439F43386ABDE": "LBAAZ.",  // Enzo
-  "D4C5246F8626183": "LBAAZ.",  // Gubba
+  "D4C5246F8626183": ["LBAAZ.", "LBAAK."],  // Gubba
   "9F14D86AD3F591F8": "LBAAZ.",  // VP3
   "4E13F2276A9D2180": "LBAAZ.",  // Dxllz
 };
