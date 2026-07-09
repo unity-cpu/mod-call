@@ -46,7 +46,6 @@ const WHITELIST = {
   "9F3619E3FB5953E0": "LBAAZ.",  // zenngt
   "DC493DEB24FDD9B7": "LBAAZ.",  // AydenVR
   "CDAD910551C5B3C5": ["LBAAK.", "LBAAZ."],  // cl0udz
-  "BB75C720D543C50C": ["LBAAK.", "LBAAZ."],  // jaxjr
   "EA12FC6A4F8AF723": "LBAAK.",  // princess
   "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],  // FLOWERY
   "4AB371870F86220B": "LBAAK.",  // nasty plemba
