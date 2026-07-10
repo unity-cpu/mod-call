@@ -71,7 +71,7 @@ const WHITELIST = {
   "144307CFFF9493B1": "*",  // flwoers
   "B716F79A9FC37CC9": "*",  // toast
   "DD84C718E8AFD777": ["LBAAK.", "FORESTGUIDE.", "COFOUNDER."],  // salt/sot
-  "8AB439F43386ABDE": "LBAAZ.",  // Enzo
+  "8AB439F43386ABDE": ["LBAAZ.", "LBAAK."],  // Enzo
   "D4C5246F8626183": ["LBAAZ.", "LBAAK."],  // Gunna
   "9F14D86AD3F591F8": "LBAAZ.",  // VP3
   "4E13F2276A9D2180": "LBAAZ.",  // Dxllz
