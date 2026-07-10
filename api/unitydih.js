@@ -56,7 +56,7 @@ const WHITELIST = {
   "C2619AF7FA41850": ["LBAAK.", "LBAAZ."],  // knpo
   "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."],  // sin
   "8F5748B622B6F323": "*",  // Flowers
-  "532CC7565FB89085": "*",  // flower
+  "532CC7565FB89085": ["LBAAD.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FORESTGUIDE.", "LBADE.", "ILLUSTRATOR.", "MMSHIRT."],  // flower
   "A323BD691D53346D": ["LBAAK.", "LBAAZ."],  // 𝚅𝚎𝚕𝚘  - Tempted Jr
   "5433C00BD5343624": "LBAAK.",  // JAX
   "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // bunny
