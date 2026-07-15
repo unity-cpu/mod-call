@@ -48,7 +48,7 @@ const WHITELIST = {
   "CDAD910551C5B3C5": ["LBAAK.", "LBAAZ."],  // cl0udz
   "EA12FC6A4F8AF723": "LBAAK.",  // princess
   "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],  // FLOWERY
-  "4AB371870F86220B": "LBAAK.",  // nasty plemba
+  "4AB371870F86220B": ["LBAAK.", "FORESTGUIDE."],  // plemba
   "CF17CC675112D85A": ["LBAAZ.", "LBAAK."],  // Lazybeans
   "CEF3083A3BE0F883": "*",  // techno
   "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],  // mrsandman
