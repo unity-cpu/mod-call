@@ -78,6 +78,7 @@ const WHITELIST = {
   "811906DA324ABB9A": "*",  // gubba
   "7D523422405EA223": "LBAAK.",  // fahh
   "9F11119FB43E872": "LBAAZ.",  // levi
+  "44B50AADC4D63447": "LBAAZ.",  // kiwi
 };
 
 // Content creator whitelist: playerId -> name
