@@ -77,6 +77,7 @@ const WHITELIST = {
   "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE."],  // vext
   "811906DA324ABB9A": "*",  // gubba
   "7D523422405EA223": "LBAAK.",  // fahh
+  "9F11119FB43E872": "LBAAZ.",  // levi
 };
 
 // Content creator whitelist: playerId -> name
