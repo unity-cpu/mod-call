@@ -73,7 +73,7 @@ const WHITELIST = {
   "8AB439F43386ABDE": ["LBAAZ.", "LBAAK."],  // Enzo
   "D4C5246F8626183": ["LBAAZ.", "LBAAK."],  // Gunna
   "9F14D86AD3F591F8": ["LBAAZ.", "FORESTGUIDE.", "LBAAK."],  // vp3
-  "4E13F2276A9D2180": "LBAAZ.",  // Dxllz
+  "4E13F2276A9D2180": ["LBAAZ.", "LBAAK."],  // dxllz
   "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE."],  // vext
   "811906DA324ABB9A": "*",  // gubba
   "7D523422405EA223": "LBAAK.",  // fahh
