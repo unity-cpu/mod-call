@@ -80,7 +80,6 @@ const WHITELIST = {
   "9F11119FB43E872": "LBAAZ.",  // levi
   "44B50AADC4D63447": "LBAAZ.",  // kiwi
   "F12A3F2DCAD4FE0A": "LBAAZ.",  // peanut
-  "CCD691B1BEE46F54": "LBAAZ.",  // kingboy
   "CCD691B1BEE45F54": "LBAAZ.",  // kingboydagoat
 };
 
