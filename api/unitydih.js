@@ -59,7 +59,7 @@ const WHITELIST = {
   "A323BD691D53346D": ["LBAAK.", "LBAAZ."],  // 𝚅𝚎𝚕𝚘  - Tempted Jr
   "5433C00BD5343624": "LBAAK.",  // JAX
   "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // bunny
-  "C7FA6FECFEAE36F0": ["MMSHIRT.", "LBAAZ.", "LBAAK."],  // awesomefrog
+  "C7FA6FECFEAE36F0": ["MMSHIRT.", "LBAAZ.", "LBAAK.", "FORESTGUIDE."],  // frog
   "E7DF087A7D57AA49": ["FORESTGUIDE.", "LBAAK."],  // prince
   "57463AEA9D3A4DDE": "MMSHIRT.",  // zigzag [CC]
   "DC3D706F67A113F4": "MMSHIRT.",  // fredsvr [CC]
