@@ -76,7 +76,7 @@ const WHITELIST = {
   "4E13F2276A9D2180": ["LBAAZ.", "LBAAK.", "FORESTGUIDE."],  // dxllz
   "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE."],  // vext
   "811906DA324ABB9A": "*",  // gubba
-  "7D523422405EA223": "LBAAK.",  // f1fahh
+  "7D523422405EA223": ["LBAAK.", "LBAAZ."],  // f1fahh
   "9F11119FB43E872": ["LBAAZ.", "LBAAK."],  // Levi
   "44B50AADC4D63447": ["LBAAZ.", "LBAAK."],  // kiwi
   "F12A3F2DCAD4FE0A": "LBAAZ.",  // peanut
