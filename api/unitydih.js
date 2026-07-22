@@ -81,7 +81,7 @@ const WHITELIST = {
   "44B50AADC4D63447": ["LBAAZ.", "LBAAK."],  // kiwi
   "F12A3F2DCAD4FE0A": ["LBAAZ.", "LBAAK."],  // peanut
   "CCD691B1BEE45F54": "LBAAZ.",  // kingboydagoat
-  "FE3BA729EE648CD6": "LBAAZ.",  // mj
+  "FE3BA729EE648CD6": ["LBAAZ.", "LBAAK."],  // mj
   "5DBBBCCB5A594ADF": ["LBAAZ.", "LBAAK."],  // Lexi
   "A48D3ADAFB2EBC7C": "LBAAZ.",  // Akuma
 };
