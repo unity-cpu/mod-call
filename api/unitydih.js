@@ -84,6 +84,7 @@ const WHITELIST = {
   "FE3BA729EE648CD6": ["LBAAZ.", "LBAAK."],  // mj
   "5DBBBCCB5A594ADF": ["LBAAZ.", "LBAAK."],  // Lexi
   "A48D3ADAFB2EBC7C": "LBAAZ.",  // Akuma
+  "84998BA1CD9AE1D6": "FORESTGUIDE.",  // dream
 };
 
 // Content creator whitelist: playerId -> name
