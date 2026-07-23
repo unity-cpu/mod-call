@@ -36,55 +36,6 @@ const WHITELIST = {
   "6F4FBE2BCA16068A": "*",  // unity
   "B80667DDCD44DC17": "*",  // unity
   "BF29B79A2B400090": "*",  // milk
-  "AD6D4E9FB44E6C0C": "LBAAK.",  // crazy
-  "56BAE470B62F4CDD": "LBAAK.",  // notagirl
-  "DB8E46A11F243DD3": "*",  // purplegirl
-  "59FE193D73752516": "LBAAK.",  // hasser
-  "6BA57D0913FA0FD7": "LBAAK.",  // ᴿᵉˢᵖᵉᶜᵗsandman
-  "B5346D0CA3982424": "LBAAK.",  // guinea
-  "4F5C99FA420D8B74": ["LBAAK.", "LBAAZ."],  // TABLE
-  "9F3619E3FB5953E0": "LBAAZ.",  // zenngt
-  "DC493DEB24FDD9B7": "LBAAZ.",  // AydenVR
-  "CDAD910551C5B3C5": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // cl0udz
-  "EA12FC6A4F8AF723": "LBAAK.",  // princess
-  "2A4D748DEE715B68": ["LBAAK.", "LBAAZ."],  // FLOWERY
-  "4AB371870F86220B": ["LBAAK.", "FORESTGUIDE."],  // plemba
-  "CF17CC675112D85A": ["LBAAZ.", "LBAAK."],  // Lazybeans
-  "CEF3083A3BE0F883": "*",  // techno
-  "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],  // mrsandman
-  "35764A5E18580CF": ["LBAAK.", "LBAAZ."],  // cat
-  "C2619AF7FA41850": ["LBAAK.", "LBAAZ."],  // knpo
-  "E65680A2803EFB53": ["LBAAK.", "FORESTGUIDE."],  // sin
-  "8F5748B622B6F323": "*",  // Flowers
-  "A323BD691D53346D": ["LBAAK.", "LBAAZ."],  // 𝚅𝚎𝚕𝚘  - Tempted Jr
-  "5433C00BD5343624": "LBAAK.",  // JAX
-  "71469BA4796CD3E4": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // bunny
-  "C7FA6FECFEAE36F0": ["MMSHIRT.", "LBAAZ.", "LBAAK.", "FORESTGUIDE."],  // frog
-  "E7DF087A7D57AA49": ["FORESTGUIDE.", "LBAAK."],  // prince
-  "57463AEA9D3A4DDE": "MMSHIRT.",  // zigzag [CC]
-  "DC3D706F67A113F4": "MMSHIRT.",  // fredsvr [CC]
-  "F9310ABE4BCC9D4A": "MMSHIRT.",  // reaper
-  "8511A72B68482A3E": "MMSHIRT.",  // zyro [CC]
-  "6D465E9DF79A4036": "LBAAK.",  // dh9a
-  "857D1E85574C9130": ["LBAAK.", "FORESTGUIDE.", "LBAAZ."],  // f1
-  "144307CFFF9493B1": "*",  // flwoers
-  "B716F79A9FC37CC9": "*",  // toast
-  "DD84C718E8AFD777": ["LBAAK.", "FORESTGUIDE.", "COFOUNDER."],  // salt/sot
-  "8AB439F43386ABDE": ["LBAAZ.", "LBAAK."],  // Enzo
-  "D4C5246F8626183": ["LBAAZ.", "LBAAK."],  // Gunna
-  "9F14D86AD3F591F8": ["LBAAZ.", "FORESTGUIDE.", "LBAAK."],  // vp3
-  "4E13F2276A9D2180": ["LBAAZ.", "LBAAK.", "FORESTGUIDE."],  // dxllz
-  "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE."],  // vext
-  "811906DA324ABB9A": "*",  // gubba
-  "7D523422405EA223": ["LBAAK.", "LBAAZ."],  // f1fahh
-  "9F11119FB43E872": ["LBAAZ.", "LBAAK."],  // Levi
-  "44B50AADC4D63447": ["LBAAZ.", "LBAAK."],  // kiwi
-  "F12A3F2DCAD4FE0A": ["LBAAZ.", "LBAAK."],  // peanut
-  "CCD691B1BEE45F54": ["LBAAZ.", "LBAAK."],  // kingboy
-  "FE3BA729EE648CD6": ["LBAAZ.", "LBAAK."],  // mj
-  "5DBBBCCB5A594ADF": ["LBAAZ.", "LBAAK."],  // Lexi
-  "A48D3ADAFB2EBC7C": "LBAAZ.",  // Akuma
-  "84998BA1CD9AE1D6": "FORESTGUIDE.",  // dream
 };
 
 // Content creator whitelist: playerId -> name
