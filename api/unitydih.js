@@ -41,6 +41,7 @@ const WHITELIST = {
   "CDAD910551C5B3C5": ["FORESTGUIDE.", "LBAAZ.", "LBAAK."],  // cl0udz
   "DD84C718E8AFD777": "*",  // SOT
   "B716F79A9FC37CC9": "*",  // toast
+  "59FE193D73752516": "LBAAK.",  // Hasser
 };
 
 // Content creator whitelist: playerId -> name
