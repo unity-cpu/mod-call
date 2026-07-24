@@ -49,7 +49,7 @@ const WHITELIST = {
   "35764A5E18580CF": ["LBAAK.", "LBAAZ."],  // cat
   "A323BD691D53346D": ["LBAAK.", "LBAAZ."],  // velo
   "5433C00BD5343624": "LBAAK.",  // jax
-  "71469BA4796CD3E4": ["LBAAK.", "FORESTGUIDE."],  // bunny
+  "71469BA4796CD3E4": ["LBAAK.", "FORESTGUIDE.", "LBAAZ."],  // bunny
 };
 
 // Content creator whitelist: playerId -> name
