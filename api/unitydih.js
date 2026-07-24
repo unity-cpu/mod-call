@@ -46,6 +46,7 @@ const WHITELIST = {
   "EA12FC6A4F8AF723": "LBAAK.",  // princess
   "CF17CC675112D85A": ["LBAAK.", "LBAAZ."],  // lazybeans4
   "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],  // mrsandman
+  "35764A5E18580CF": "LBAAK.",  // cat
 };
 
 // Content creator whitelist: playerId -> name
