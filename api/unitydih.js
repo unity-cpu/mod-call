@@ -52,6 +52,7 @@ const WHITELIST = {
   "71469BA4796CD3E4": ["LBAAK.", "FORESTGUIDE.", "LBAAZ."],  // bunny
   "6D465E9DF79A4036": "LBAAK.",  // dh9a
   "857D1E85574C9130": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // f1
+  "9F14D86AD3F591F8": "FORESTGUIDE.",  // VP3
 };
 
 // Content creator whitelist: playerId -> name
