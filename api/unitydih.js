@@ -55,7 +55,7 @@ const WHITELIST = {
   "9F14D86AD3F591F8": ["FORESTGUIDE.", "LBAAK.", "LBAAZ."],  // VP3
   "4E13F2276A9D2180": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // dxllz
   "811906DA324ABB9A": "*",  // gubba
-  "7D523422405EA223": ["LBAAK.", "LBAAZ."],  // f1fahh
+  "7D523422405EA223": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // f1fahh
   "9F11119FB43E872": ["LBAAK.", "LBAAZ."],  // levi
   "44B50AADC4D63447": ["LBAAZ.", "LBAAK."],  // kiwi
   "F12A3F2DCAD4FE0A": ["LBAAK.", "LBAAZ."],  // peanut
