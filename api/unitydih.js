@@ -36,7 +36,7 @@ const WHITELIST = {
   "6F4FBE2BCA16068A": "*",  // unity
   "B80667DDCD44DC17": "*",  // unity
   "BF29B79A2B400090": "*",  // milk
-  "C7FA6FECFEAE36F0": "LBAAK.",  // frog
+  "C7FA6FECFEAE36F0": ["LBAAK.", "LBAAZ."],  // frog
 };
 
 // Content creator whitelist: playerId -> name
