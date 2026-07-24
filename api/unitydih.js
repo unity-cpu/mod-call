@@ -37,7 +37,7 @@ const WHITELIST = {
   "B80667DDCD44DC17": "*",  // unity
   "BF29B79A2B400090": "*",  // milk
   "C7FA6FECFEAE36F0": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // frog
-  "E2B0AC15801DC134": "LBAAK.",  // vext
+  "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE."],  // vext
 };
 
 // Content creator whitelist: playerId -> name
