@@ -61,6 +61,7 @@ const WHITELIST = {
   "F12A3F2DCAD4FE0A": ["LBAAK.", "LBAAZ."],  // peanut
   "CCD691B1BEE45F54": ["LBAAZ.", "LBAAK."],  // kingboydagoat
   "FE3BA729EE648CD6": ["LBAAZ.", "LBAAK."],  // mj
+  "5DBBBCCB5A594ADF": "LBAAZ.",  // lexi
 };
 
 // Content creator whitelist: playerId -> name
