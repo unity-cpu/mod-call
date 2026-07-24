@@ -48,6 +48,7 @@ const WHITELIST = {
   "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],  // mrsandman
   "35764A5E18580CF": ["LBAAK.", "LBAAZ."],  // cat
   "A323BD691D53346D": ["LBAAK.", "LBAAZ."],  // velo
+  "5433C00BD5343624": "LBAAK.",  // jax
 };
 
 // Content creator whitelist: playerId -> name
