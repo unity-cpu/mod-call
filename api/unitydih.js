@@ -39,6 +39,7 @@ const WHITELIST = {
   "C7FA6FECFEAE36F0": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // frog
   "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE."],  // vext
   "CDAD910551C5B3C5": ["FORESTGUIDE.", "LBAAZ.", "LBAAK."],  // cl0udz
+  "DD84C718E8AFD777": "*",  // SOT
 };
 
 // Content creator whitelist: playerId -> name
