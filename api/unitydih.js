@@ -43,6 +43,7 @@ const WHITELIST = {
   "B716F79A9FC37CC9": "*",  // toast
   "59FE193D73752516": "LBAAK.",  // Hasser
   "6BA57D0913FA0FD7": "LBAAK.",  // mrsandman
+  "EA12FC6A4F8AF723": "LBAAK.",  // princess
 };
 
 // Content creator whitelist: playerId -> name
