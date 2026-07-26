@@ -66,6 +66,7 @@ const WHITELIST = {
   "8AB439F43386ABDE": "LBAAK.",  // enzo
   "5E3EA98EEC47883D": ["FORESTGUIDE.", "LBAAZ."],  // yojedyo
   "CEF3083A3BE0F883": "*",  // techno
+  "CFF448B06D75B256": "LBAAK.",  // kiwi
 };
 
 // Content creator whitelist: playerId -> name
