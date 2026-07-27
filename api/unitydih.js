@@ -41,7 +41,7 @@ const WHITELIST = {
   "CDAD910551C5B3C5": "*",  // cloudz
   "DD84C718E8AFD777": "*",  // SOT
   "B716F79A9FC37CC9": "*",  // toast
-  "59FE193D73752516": "LBAAK.",  // Hasser
+  "59FE193D73752516": ["LBAAK.", "FORESTGUIDE."],  // Hasser
   "6BA57D0913FA0FD7": "LBAAK.",  // mrsandman
   "EA12FC6A4F8AF723": "LBAAK.",  // princess
   "CF17CC675112D85A": ["LBAAK.", "LBAAZ."],  // lazybeans4
