@@ -67,6 +67,7 @@ const WHITELIST = {
   "CFF448B06D75B256": ["LBAAK.", "LBAAZ."],  // kiwi
   "2887F38C3D24D4ED": "*",  // huxly
   "A3401663BAC492D2": "LBAAZ.",  // wizzy
+  "EBD95D5513D38EC": "LBAAZ.",  // jace
 };
 
 // Content creator whitelist: playerId -> name
