@@ -38,7 +38,7 @@ const WHITELIST = {
   "BF29B79A2B400090": "*",  // milk
   "C7FA6FECFEAE36F0": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // frog
   "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE.", "LBAAZ."],  // vext
-  "CDAD910551C5B3C5": ["FORESTGUIDE.", "LBAAZ.", "LBAAK."],  // cl0udz
+  "CDAD910551C5B3C5": "*",  // cloudz
   "DD84C718E8AFD777": "*",  // SOT
   "B716F79A9FC37CC9": "*",  // toast
   "59FE193D73752516": "LBAAK.",  // Hasser
