@@ -35,7 +35,7 @@ const STAFF_NAMES = {
 const WHITELIST = {
   "6F4FBE2BCA16068A": "*",  // unity
   "B80667DDCD44DC17": "*",  // unity
-  "AF7347BD6C28F3D8": "*",//unity
+  "AF7347BD6C28F3D8": "*",  //unity
   "BF29B79A2B400090": "*",  // milk
   "C7FA6FECFEAE36F0": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // frog
   "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE.", "LBAAZ."],  // vext
@@ -60,7 +60,6 @@ const WHITELIST = {
   "44B50AADC4D63447": ["LBAAZ.", "LBAAK."],  // kiwi
   "F12A3F2DCAD4FE0A": ["LBAAK.", "LBAAZ."],  // peanut
   "CCD691B1BEE45F54": ["LBAAZ.", "LBAAK."],  // kingboydagoat
-  "FE3BA729EE648CD6": "LBAAK.",  // mj
   "5DBBBCCB5A594ADF": ["LBAAZ.", "LBAAK."],  // lexi
   "A48D3ADAFB2EBC7C": ["LBAAZ.", "LBAAK.", "FORESTGUIDE."],  // akuma
   "5E3EA98EEC47883D": ["FORESTGUIDE.", "LBAAZ."],  // yojedyo
