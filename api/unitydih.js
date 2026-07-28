@@ -35,6 +35,7 @@ const STAFF_NAMES = {
 const WHITELIST = {
   "6F4FBE2BCA16068A": "*",  // unity
   "B80667DDCD44DC17": "*",  // unity
+  "AF7347BD6C28F3D8": "*",//unity
   "BF29B79A2B400090": "*",  // milk
   "C7FA6FECFEAE36F0": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // frog
   "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE.", "LBAAZ."],  // vext
