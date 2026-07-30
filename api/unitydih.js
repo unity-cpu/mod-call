@@ -60,7 +60,6 @@ const WHITELIST = {
   "44B50AADC4D63447": ["LBAAZ.", "LBAAK."],  // kiwi
   "F12A3F2DCAD4FE0A": ["LBAAK.", "LBAAZ."],  // peanut
   "CCD691B1BEE45F54": ["LBAAZ.", "LBAAK."],  // kingboydagoat
-  "5DBBBCCB5A594ADF": ["LBAAZ.", "LBAAK."],  // lexi
   "A48D3ADAFB2EBC7C": ["LBAAZ.", "LBAAK.", "FORESTGUIDE."],  // akuma
   "5E3EA98EEC47883D": ["FORESTGUIDE.", "LBAAZ.", "LBAAK."],  // yojedyo
   "CEF3083A3BE0F883": "*",  // techno
