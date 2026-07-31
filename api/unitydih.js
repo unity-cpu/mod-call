@@ -69,6 +69,7 @@ const WHITELIST = {
   "A1E0B337A62E068E": ["LBAAK.", "LBAAZ."],  // crazy
   "AF1612F38858A8C3": ["LBAAZ.", "LBAAK."],  // lexi
   "FE555878C2EB4D6C": "LBAAZ.",  // idk
+  "DDB2AE3E5C7BF91B": "FORESTGUIDE.",  // 11
 };
 
 // Content creator whitelist: playerId -> name
