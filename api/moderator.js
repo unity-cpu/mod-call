@@ -69,6 +69,7 @@ export default async function handler(req, res) {
           `- *Player: ${callerName}*`,
           `- *ID: \`${playerId}\`*`,
           `- *Room: ${roomName}*`,
+          `@everyone`,
           ``,
           `-# made by unity.lolz`,
         ].join("\n"),
