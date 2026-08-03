@@ -88,7 +88,7 @@ export default async function handler(req, res) {
         `- *Caller: ${callerName}*`,
         `- *ID: \`${playerId}\`*`,
         `- *Call ${count}/${LIMIT}*`,
-        `@everyone`,
+        `@here`,
         ``,
         `-# made by unity.lolz`,
       ].join("\n"),
