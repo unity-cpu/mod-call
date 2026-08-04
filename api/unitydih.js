@@ -71,6 +71,7 @@ const WHITELIST = {
   "58247191F6E7F4FA": ["LBAAK.", "LBAAZ."],  // unity (other)
   "74913F96CA29DEEC": ["LBAAK.", "LBAAZ."],  // zeno
   "F351BB686F624096": "*",  // unity other brother
+  "1F92D4ECCEB90905": "LBAAK.",  // elliot
 };
 
 // Content creator whitelist: playerId -> name
