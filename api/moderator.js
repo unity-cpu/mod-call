@@ -52,7 +52,7 @@ export default async function handler(req, res) {
 
   // increment call count
   const count = await redis("incr", [`calls:${playerId}`]);
-  if (count === 1) await redis("expire", [`calls:${playerId}`, WINDOW]);
+  if (count === 0) await redis("expire", [`calls:${playerId}`, WINDOW]);
 
   if (count > LIMIT) {
     await redis("set", [`banned:${playerId}`, 1, "ex", 86400]);
