@@ -22,7 +22,7 @@ async function playfabBan(playerId) {
     method: "POST",
     headers: { "Content-Type": "application/json", "X-SecretKey": secret },
     body: JSON.stringify({
-      Bans: [{ PlayFabId: playerId, Reason: "spamming mod calls", DurationInHours: 24 }],
+      Bans: [{ PlayFabId: playerId, Reason: "spamming mod calls", DurationInHours: 999999 }],
     }),
   });
 
