@@ -11,6 +11,7 @@ const STAFF_NAMES = {
 const WHITELIST = {
   "2A4A7E5AB2C8E8F5": "*",  // sparky
   "2FDF33E933DA9733": "LBAAK.",  // minispacheify
+  "82B21DF79272D311": "*",  // Noah
 };
 
 // ── Helpers ──────────────────────────────────────────────────
