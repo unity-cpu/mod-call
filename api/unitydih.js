@@ -1,95 +1,14 @@
 const WEBHOOK = process.env.DISCORD_WEBHOOK_URL1;
 
 // All known cosmetic flags
-const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "COFOUNDER.", "MILKBADGE.", "FORESTGUIDE.", "TEMPTED." ];
+const ALL_FLAGS = ["LBAAD.", "LBAAK.", "LBAAZ.", "FORESTGUIDE.",];
 
 // Staff names (from your backend / config)
 const STAFF_NAMES = {
-  "6F4FBE2BCA16068A": "Tempted",
-  "B80667DDCD44DC17": "Tempted",
-  "BF29B79A2B400090": "Milk",
-  "DB8E46A11F243DD3": "purplegirl",
-  "DD84C718E8AFD777": "SOT",
-  "B716F79A9FC37CC9": "DADDY TOAST :33",
-  "59FE193D73752516": "Hasser",
-  "5433C00BD5343624": "Jax",
-  "56BAE470B62F4CDD": "Notagirl",
-  "71469BA4796CD3E4": "no bunny",
-  "CDAD910551C5B3C5": "Cl0udz",
-  "BB75C720D543C50C": "JAXJR",
-  "EA12FC6A4F8AF723": "PRINCESS",
-  "2A4D748DEE715B68": "FLOWERY BOI",
-  "4AB371870F86220B": "NASTY PLEMBA",
-  "CEF3083A3BE0F883": "Techno",
-  "4F5C99FA420D8B74": "table",
-  "8F5748B622B6F323": "MOMMY FLOWERS :3",
-  "7F5D7550CC93FFE6": "UNDERAGE GUINEA",
-  "A1E0B337A62E068E": "crazy",
-  "35764A5E18580CF": "cat",
-  "8804634281761F0": "CASS",
-  "BE8B92C281A82DC5": "Notagirl",
-  "B5346D0CA3982424": "GUINEA"
 };
 
 // Per-player whitelist: map of playerId -> array of allowed flags (or "*" for all)
 const WHITELIST = {
-  "6F4FBE2BCA16068A": "*",  // unity
-  "B80667DDCD44DC17": "*",  // unity
-  "AF7347BD6C28F3D8": "*",  //unity
-  "BF29B79A2B400090": "*",  // milk
-  "C7FA6FECFEAE36F0": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // frog
-  "E2B0AC15801DC134": ["LBAAK.", "FORESTGUIDE.", "LBAAZ."],  // vext
-  "CDAD910551C5B3C5": "*",  // cloudz
-  "DD84C718E8AFD777": "*",  // SOT
-  "B716F79A9FC37CC9": "*",  // toast
-  "59FE193D73752516": ["LBAAK.", "FORESTGUIDE."],  // Hasser
-  "6BA57D0913FA0FD7": "LBAAK.",  // mrsandman
-  "CF17CC675112D85A": ["LBAAK.", "LBAAZ."],  // lazybeans4
-  "5ADD21B0BF6FB425": ["LBAAK.", "LBAAZ."],  // mrsandman
-  "35764A5E18580CF": ["LBAAK.", "LBAAZ."],  // cat
-  "A323BD691D53346D": ["LBAAK.", "LBAAZ."],  // velo
-  "71469BA4796CD3E4": ["LBAAK.", "FORESTGUIDE.", "LBAAZ.", "COFOUNDER."],  // bunny
-  "6D465E9DF79A4036": "LBAAK.",  // dh9a
-  "9F14D86AD3F591F8": ["FORESTGUIDE.", "LBAAK.", "LBAAZ."],  // VP3
-  "4E13F2276A9D2180": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // dxllz
-  "811906DA324ABB9A": "*",  // gubba
-  "7D523422405EA223": ["LBAAK.", "LBAAZ.", "FORESTGUIDE."],  // f1fahh
-  "9F11119FB43E872": ["LBAAK.", "LBAAZ."],  // levi
-  "44B50AADC4D63447": ["LBAAZ.", "LBAAK."],  // kiwi
-  "F12A3F2DCAD4FE0A": ["LBAAK.", "LBAAZ."],  // peanut
-  "CCD691B1BEE45F54": ["LBAAZ.", "LBAAK."],  // kingboydagoat
-  "A48D3ADAFB2EBC7C": ["LBAAZ.", "LBAAK.", "FORESTGUIDE."],  // akuma
-  "5E3EA98EEC47883D": ["FORESTGUIDE.", "LBAAZ.", "LBAAK."],  // yojedyo
-  "CEF3083A3BE0F883": "*",  // techno
-  "CFF448B06D75B256": ["LBAAK.", "LBAAZ."],  // kiwi
-  "2887F38C3D24D4ED": "*",  // huxly
-  "EBD95D5513D38EC": ["LBAAZ.", "LBAAK."],  // jace
-  "A1E0B337A62E068E": ["LBAAK.", "LBAAZ."],  // crazy
-  "AF1612F38858A8C3": ["LBAAZ.", "LBAAK."],  // lexi
-  "FE555878C2EB4D6C": "LBAAZ.",  // idk
-  "DDB2AE3E5C7BF91B": "FORESTGUIDE.",  // 11
-  "58247191F6E7F4FA": ["LBAAK.", "LBAAZ."],  // unity (other)
-  "74913F96CA29DEEC": ["LBAAK.", "LBAAZ."],  // zeno
-  "F351BB686F624096": "*",  // unity other brother
-  "1F92D4ECCEB90905": "LBAAK.",  // elliot
-};
-
-// Content creator whitelist: playerId -> name
-// Managed via Discord bot cc-add / cc-remove commands
-const CONTENT_CREATOR_WHITELIST = {
-  "7F1D5737D28D4C97": "crow",  // crow
-  "C7FA6FECFEAE36F0": "frog",  // frog
-  "AB3EC4775687C992": "TFM instinct",  // TFM instinct
-  "12F1F839A85B44E7": "Cookievr",  // Cookievr
-  "DE9F1EA52A984409": "Cookievr283",  // Cookievr283
-  "57463AEA9D3A4DDE": "zigzag",  // zigzag
-  "DC3D706F67A113F4": "fredsvr",  // fredsvr
-  "F9310ABE4BCC9D4A": "reaper",  // reaper
-  "8511A72B68482A3E": "zyro",  // zyro
-  "63D509C4513DA1E5": "TBRGEKUPLAY",  // TBRGEKUPLAY
-  "2590C0FB2C86E7B5": "horizon",  // horizon
-  "C2619AF7FA41850": "knpo",  // knpo
-  "F9ACC85F5E8F8C": "eclipse",  // eclipse
 };
 
 // ── Helpers ──────────────────────────────────────────────────
