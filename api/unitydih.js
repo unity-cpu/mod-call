@@ -9,6 +9,7 @@ const STAFF_NAMES = {
 
 // Per-player whitelist: map of playerId -> array of allowed flags (or "*" for all)
 const WHITELIST = {
+  "2A4A7E5AB2C8E8F5 ?": "*",  // sparky
 };
 
 // ── Helpers ──────────────────────────────────────────────────
